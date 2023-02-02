@@ -1,52 +1,86 @@
 
-var userAnswers = [];
-var images = [];
-var questions = [{question: "What word best describes the tone of the voice?", //Material for face
-    options:["soft", "bright", "sad", "mellow","angry", "rough", "uptight", "smooth", "flat", "sharp"]},
-    {question: "How seriously do you take what the voice is telling you? Is it very important or does it have very little meaning?", //Warm or Cool
-        options:["very intrusive", "neutral", "not involved, very hands off"]},
-    {question: "How strict is the voice? 1 is least strict, 7 is extremely strict.", //Shape of head
-        options:["one", "two", "three", "four","five", "six", "seven"]},
-    {question: "What word best describes the mood that your intrusive inner voice is in?", //Eyes
-        options:["happy ", "sad", "neutral", "angry","scared", "anxious", "manipulative", "jealous"]},
-    {question: "How loud is the voice? 1 is quietest, 7 is loudest.", //Mouth
-        options:["one", "two", "three", "four","five", "six", "seven"]}];
+const questions = [
+    {
+        question: "What word best describes the tone of the voice?", //Material for face
+        options: ["soft", "bright", "sad", "mellow","angry", "rough", "uptight", "smooth", "flat", "sharp"]
+    },
+    {
+        question: "How seriously do you take what the voice is telling you? Is it very important or does it have very little meaning?",//Warm or Cool
+        options: ["very intrusive", "neutral", "not involved, very hands off"]
+    },
+    {
+        question: "How strict is the voice? 1 is least strict, 7 is extremely strict.", //Shape of head
+        options: ["one", "two", "three", "four","five", "six", "seven"]
+    },
+    {
+        question: "What word best describes the mood that your intrusive inner voice is in?", //Eyes
+        options: ["happy ", "sad", "neutral", "angry","scared", "anxious", "manipulative", "jealous"]
+    },
+    {
+        question: "How loud is the voice? 1 is quietest, 7 is loudest.",
+        options: ["one", "two", "three", "four","five", "six", "seven"]
+    }
+];
 
-
-var currentQuestion = 0;
-var nextButtonCreated = false;
+const images = [];
+const userAnswers = [];
+let currentQuestion = 0;
+let nextButtonCreated = false;
 
 function displayQuestion() {
-    var questionDiv = document.getElementById("question");
-    questionDiv.innerHTML = questions[currentQuestion].question;
 
-    //will need to create a second variable for question #2
-    var optionsDiv = document.getElementById("options");
-    for (var i = 0; i < questions[currentQuestion].options.length; i++) {
-        var optionDiv = document.createElement("div");
-        optionDiv.style.cursor = "pointer";
-        optionDiv.onmouseover = function() {
-            this.style.color = "red";
-        }
-        optionDiv.onmouseout = function() {
-            this.style.color = "";
-        }
+    const questionContainer = document.getElementById("question");
+    const optionsContainer = document.getElementById("options");
 
-        var optionInput = document.createElement("input");
-        optionInput.type = "radio";
-        optionInput.name = "option";
-        optionInput.value = questions[currentQuestion].options[i];
-        optionInput.onclick = function() {
-            userAnswers[currentQuestion] = this.value;
-            nextQuestion(currentQuestion, questions[currentQuestion].options.indexOf(this.value));
-        }
+    questionContainer.innerHTML = questions[currentQuestion].question;
+    optionsContainer.innerHTML = questions[currentQuestion].options
+        .map(
+            (option, index) =>
+                `<label id="label-${index}" class="option-label"><input type="radio" name="answer" value="${option}">${option}</label><br>`
+        )
+        .join("");
 
-        var optionLabel = document.createElement("label");
-        optionLabel.innerHTML = questions[currentQuestion].options[i];
-        optionDiv.appendChild(optionInput);
-        optionDiv.appendChild(optionLabel);
-        optionsDiv.appendChild(optionDiv);
+    const labels = document.querySelectorAll(".option-label");
+    labels.forEach(label => {
+        label.addEventListener("mouseover", function() {
+            label.style.color = "red";
+        });
+        label.addEventListener("mouseout", function() {
+            label.style.color = "";
+        });
+    });
+
+    optionsContainer.onclick = function(event) {
+        const selectedOption = event.target.value;
+        userAnswers[currentQuestion] = selectedOption;
+        nextQuestion();
+        displayThis(currentQuestion, questions[currentQuestion].options.indexOf(selectedOption));
+
     }
+
+}
+
+function nextQuestion() {
+
+    if(!nextButtonCreated){
+        const nextButton = document.createElement("button");
+        nextButton.innerHTML = "Next";
+        nextButtonCreated = true;
+        nextButton.onclick = function() {
+            currentQuestion++;
+            nextButtonCreated = false;
+
+            if (currentQuestion < questions.length) {
+                document.getElementById("options").innerHTML = "";
+                displayQuestion();
+            } else {
+                nextButtonCreated = true;
+                finalScreen();
+            }
+        }
+        document.getElementById("options").appendChild(nextButton);
+    }
+
 }
 
 function displayThis(question, answer){
@@ -182,8 +216,8 @@ function displayThis(question, answer){
 
 function displayImg(){
 
-    for(var i=0; i<images.length; i++) {
-        var imgDisplay = document.createElement("img");
+    for(let i=0; i<images.length; i++) {
+        const imgDisplay = document.createElement("img");
         imgDisplay.src = images[i].src;
         imgDisplay.style.width = "640px";
         imgDisplay.style.height = "640px";
@@ -192,30 +226,11 @@ function displayImg(){
     }
 }
 
-function nextQuestion(question, answer) {
-
-    if(!nextButtonCreated){
-        var nextButton = document.createElement("button");
-        nextButton.innerHTML = "Next";
-        nextButtonCreated = true;
-    }
-    nextButton.onclick = function() {
-
-        displayThis(question, answer);
-        currentQuestion++;
-        nextButtonCreated = false;
-
-        if (currentQuestion < questions.length) {
-            document.getElementById("options").innerHTML = "";
-            displayQuestion();
-        } else {
-            displayImg();
-            document.getElementById("question").innerHTML = "Quiz complete!";
-            document.getElementById("options").innerHTML = "";
-            document.getElementById("options").innerHTML = "Your answers: " + userAnswers.join(", ");
-        }
-    }
-    document.getElementById("options").appendChild(nextButton);
+function finalScreen(){
+    displayImg();
+    document.getElementById("question").innerHTML = "Quiz complete!";
+    document.getElementById("options").innerHTML = "";
+    document.getElementById("options").innerHTML = "Your answers: " + userAnswers.join(", ");
 }
 
 window.onload = displayQuestion;
