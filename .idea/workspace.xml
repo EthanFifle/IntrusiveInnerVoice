@@ -4,50 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;Second commit&quot;">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IntrusiveInnerVoiceVisualizer.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 1 - Bagrounds/angry.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 1 - Bagrounds/bright.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 1 - Bagrounds/flat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 1 - Bagrounds/mellow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 1 - Bagrounds/rough.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 1 - Bagrounds/sad.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 1 - Bagrounds/sharp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 1 - Bagrounds/smooth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 1 - Bagrounds/soft.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 1 - Bagrounds/uptight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 3 - Glows/Glows_cold.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 3 - Glows/Glows_warm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 4 - Face Shapes/five.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 4 - Face Shapes/four.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 4 - Face Shapes/one.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 4 - Face Shapes/seven.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 4 - Face Shapes/six.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 4 - Face Shapes/three.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 4 - Face Shapes/two.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 5 - Eyes/angry.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 5 - Eyes/anxious.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 5 - Eyes/happy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 5 - Eyes/jealous.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 5 - Eyes/manipulative.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 5 - Eyes/neutral.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 5 - Eyes/sad.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 5 - Eyes/scared.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 6 - Mouths/five.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 6 - Mouths/four.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 6 - Mouths/one.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 6 - Mouths/seven.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 6 - Mouths/six.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 6 - Mouths/three.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Layer 6 - Mouths/two.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Visualizer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebVisualizer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;First commit&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,8 +65,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675289899462</updated>
-      <workItem from="1675289900769" duration="2528000" />
+      <workItem from="1675289900769" duration="3590000" />
     </task>
+    <task id="LOCAL-00001" summary="&quot;First commit&quot;">
+      <created>1675293720746</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675293720746</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,7 +88,7 @@
             <State>
               <option name="CUSTOM_BOOLEAN_PROPERTIES">
                 <map>
-                  <entry key="Show.Git.Branches" value="false" />
+                  <entry key="Show.Git.Branches" value="true" />
                 </map>
               </option>
             </State>
@@ -134,6 +100,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="&quot;Second commit&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Second commit&quot;" />
+    <MESSAGE value="&quot;First commit&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;First commit&quot;" />
   </component>
 </project>
