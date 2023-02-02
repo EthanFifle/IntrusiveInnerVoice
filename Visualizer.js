@@ -51,12 +51,15 @@ function displayQuestion() {
     });
 
     optionsContainer.onclick = function(event) {
+        if (event.target.type !== "radio") {
+            return;
+        }
         const selectedOption = event.target.value;
         userAnswers[currentQuestion] = selectedOption;
         nextQuestion();
         displayThis(currentQuestion, questions[currentQuestion].options.indexOf(selectedOption));
 
-    }
+    };
 
 }
 
@@ -64,7 +67,7 @@ function nextQuestion() {
 
     if(!nextButtonCreated){
         const nextButton = document.createElement("button");
-        nextButton.innerHTML = "Next";
+        nextButton.innerHTML = (currentQuestion === questions.length - 1) ? "Finish" : "Next";
         nextButtonCreated = true;
         nextButton.onclick = function() {
             currentQuestion++;
@@ -77,7 +80,8 @@ function nextQuestion() {
                 nextButtonCreated = true;
                 finalScreen();
             }
-        }
+        };
+
         document.getElementById("options").appendChild(nextButton);
     }
 
@@ -222,6 +226,13 @@ function displayImg(){
         imgDisplay.style.width = "640px";
         imgDisplay.style.height = "640px";
         imgDisplay.style.position = "absolute";
+        imgDisplay.style.transition = "all 2s ease-in-out";
+        imgDisplay.style.opacity = "0";
+
+        setTimeout(() => {
+            imgDisplay.style.opacity = "1";
+        }, i * 1000);
+
         document.getElementById("img").appendChild(imgDisplay);
     }
 }

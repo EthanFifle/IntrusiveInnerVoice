@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;First commit&quot;" />
+    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;V2 commit&quot;">
+      <change afterPath="$PROJECT_DIR$/SytleVis.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestBenchView.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestV1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +19,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
+        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -24,6 +31,7 @@
         <option value="EthanFifle" />
       </list>
     </option>
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GithubDefaultAccount">
@@ -47,6 +55,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -63,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675289899462</updated>
-      <workItem from="1675289900769" duration="3642000" />
+      <workItem from="1675289900769" duration="14823000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;First commit&quot;">
       <created>1675293720746</created>
@@ -79,7 +88,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675303761898</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&quot;First commit&quot;">
+      <created>1675303849377</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675303849377</updated>
+    </task>
+    <task id="LOCAL-00004" summary="&quot;V2 commit&quot;">
+      <created>1675372308278</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675372308278</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,6 +129,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="&quot;Second commit&quot;" />
     <MESSAGE value="&quot;First commit&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;First commit&quot;" />
+    <MESSAGE value="&quot;V2 commit&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;V2 commit&quot;" />
   </component>
 </project>
