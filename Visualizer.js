@@ -129,7 +129,7 @@ function createImg(){
 
         if (i === 1){ //Question two handling
             if (selectedCheckboxes.length === 2) {
-                layerTwo(selectedCheckboxes[0].index, selectedCheckboxes[1].index);
+                layerTwo(userAnswers[i][0].index, userAnswers[i][1].index);
             } else {
                 allOtherLayers(i, userAnswers[i][0].answer, userAnswers[i][0].index);
             }
