@@ -9,7 +9,7 @@ const questions = [
         question: "2. When this voice appears, what are your feelings towards it? You can choose up to two feelings", //Colour
         options: ["detached", "dependant", "tranquil", "disgust", "authoritative", "curious", "calm", "angry", "optimistic", "joy", "trusting", "loyal"],
         inputType: "checkbox"
-    },
+    } ,
     {//3
         question: "3. How seriously do you take what the voice is telling you? Is it very important or does it have very little meaning?",//Warm or Cool
         options: ["very intrusive", "neutral", "not involved, very hands off"],
@@ -22,7 +22,7 @@ const questions = [
     },
     {//5
         question: "5. What word best describes the mood that your intrusive inner voice is in?", //Eyes
-        options: ["happy ", "sad", "neutral", "angry","scared", "anxious", "manipulative", "jealous"],
+        options: ["happy", "sad", "neutral", "angry","scared", "anxious", "manipulative", "jealous"],
         inputType: "radio"
     },
     {//6
@@ -34,6 +34,8 @@ const questions = [
 
 const images = [];
 const userAnswers = [];
+let displayAnswers = [];
+let selectedCheckboxes = [];
 let currentQuestion = 0;
 let nextButtonCreated = false;
 
@@ -66,41 +68,38 @@ function displayQuestion() {
 
     optionsContainer.onclick = function(event) {
         const selectedOption = event.target.value;
+        const optionIndex = questions[currentQuestion].options.indexOf(selectedOption);
 
         if (event.target.type === "radio") {
-            userAnswers[currentQuestion] = selectedOption;
-            nextQuestion();
-            allOtherLayers(currentQuestion, selectedOption, questions[currentQuestion].options.indexOf(selectedOption));
-        }else if (event.target.type === "checkbox") {
-            const selectedCheckboxes = optionsContainer.querySelectorAll("input[type=checkbox]:checked");
-            let subArray = [];
-            let combo = [];
-
-            if (selectedCheckboxes.length <= 2) {
+            if (selectedOption) {
+                userAnswers[currentQuestion] = {answer: selectedOption, index: optionIndex};
+                displayAnswers[currentQuestion] = selectedOption;
                 nextQuestion();
-
-                if (selectedCheckboxes.length === 1) {
-                    userAnswers[currentQuestion] = selectedOption;
-                    allOtherLayers(currentQuestion, selectedOption, questions[currentQuestion].options.indexOf(selectedOption));
-                } else {
-                    selectedCheckboxes.forEach(checkbox => {
-                        subArray.push(checkbox.value);
-                        combo.push(questions[currentQuestion].options.indexOf(checkbox.value));
-                    });
-                    userAnswers[currentQuestion] = subArray.join(", ");
-                    layerTwo(combo);
+            }
+        }else if (event.target.type === "checkbox") {
+            const selected = optionsContainer.querySelectorAll("input[type=checkbox]:checked");
+            if (selected.length <= 2){
+                if (event.target.checked) {
+                    selectedCheckboxes.push({answer: selectedOption, index: optionIndex});
+                    if (selectedCheckboxes.length > 2) {
+                        selectedCheckboxes.shift();
+                    }
+                } else if (!event.target.checked) {
+                    const indexToRemove = selectedCheckboxes.findIndex(
+                        option => option.answer === selectedOption
+                    );
+                    selectedCheckboxes.splice(indexToRemove, 1);
                 }
-
-
+                userAnswers[currentQuestion] = selectedCheckboxes;
+                displayAnswers[currentQuestion] = selectedCheckboxes.map(option => option.answer).join(", ");
             } else {
                 event.target.checked = false;
             }
+            nextQuestion();
         }
-
     };
 
 }
-
 function nextQuestion() {
 
     if(!nextButtonCreated){
@@ -116,7 +115,7 @@ function nextQuestion() {
                 displayQuestion();
             } else {
                 nextButtonCreated = true;
-                finalScreen();
+                createImg();
             }
         };
 
@@ -124,63 +123,83 @@ function nextQuestion() {
     }
 
 }
+function createImg(){
 
-function layerTwo(comboArray){
-    let opt_1 = comboArray[0] + 1; //+1 to match with option number and pictures
-    let opt_2 = comboArray[1] + 1;
+    for (let i = 0; i < userAnswers.length; i++) {
 
+        if (i === 1){ //Question two handling
+            if (selectedCheckboxes.length === 2) {
+                layerTwo(selectedCheckboxes[0].index, selectedCheckboxes[1].index);
+            } else {
+                allOtherLayers(i, userAnswers[i][0].answer, userAnswers[i][0].index);
+            }
+
+        } else {
+            allOtherLayers(i, userAnswers[i].answer, userAnswers[i].index);
+        }
+
+    }
+    finalScreen();
+}
+function layerTwo(indexOne, indexTwo){
+    let opt_1 = indexOne + 1; //+1 to match with option number and pictures
+    let opt_2 = indexTwo + 1;
     let src1 = "Layer 2 - Colours/Two colours/Colours_" + opt_1 + " + " + opt_2 + ".png";
     let src2 = "Layer 2 - Colours/Two colours/Colours_" + opt_2 + " + " + opt_1 + ".png";
 
-    let image = new Image();
-    image.src = src1;
-
-    image.onerror = function() {
-        image.src = src2;
-        image.onerror = function() {
-            console.error("Image not found: " + src1 + " and " + src2);
-        }
+    let temp = [];
+    if (imageExists(src1)) {
+        temp.push(src1);
+    } else if (imageExists(src2)) {
+        temp.push(src2);
+    } else {
+        console.error("Image not found: " + src1 + " and " + src2);
     }
 
-    image.onload = function() {
-        images.push({src: image.src});
-    }
+    images.push({src: temp, layer: 2 });
+
 }
 function allOtherLayers(question, answer, index){
 
     switch(question){
         case 0:
-            images.push({src: "Layer 1 - Bagrounds/" + answer + ".png"});
+            images.push({src: "Layer 1 - Bagrounds/" + answer + ".png", layer: 1 });
             break;
         case 1:
-            images.push({src: "Layer 2 - Colours/Single colours/Colours_" + answer + ".png" });
+            images.push({src: "Layer 2 - Colours/Single colours/Colours_" + answer + ".png", layer: 2 });
             break;
         case 2:
             if (index === 0){
-                images.push({src: "Layer 3 - Glows/Glows_warm.png" });
+                images.push({src: "Layer 3 - Glows/Glows_warm.png", layer: 3 });
             } else {
-                images.push({src: "Layer 3 - Glows/Glows_cold.png" });
+                images.push({src: "Layer 3 - Glows/Glows_cold.png", layer: 4 });
             }
             break;
         case 3:
-            images.push({src: "Layer 4 - Face Shapes/" + answer + ".png" });
+            images.push({src: "Layer 4 - Face Shapes/" + answer + ".png", layer: 5 });
             break;
         case 4:
-            images.push({src: "Layer 5 - Eyes/" + answer + ".png" });
+            images.push({src: "Layer 5 - Eyes/" + answer + ".png", layer: 6 });
             break;
         case 5:
-            images.push({src: "Layer 6 - Mouths/" + answer + ".png" });
+            images.push({src: "Layer 6 - Mouths/" + answer + ".png", layer: 7 });
             break;
         default:
     }
 
 }
-
+function imageExists(image_url) {
+    let http = new XMLHttpRequest();
+    http.open('HEAD', image_url, false);
+    http.send();
+    return http.status !== 404;
+}
 function displayImg(){
 
     for(let i=0; i<images.length; i++) {
         const imgDisplay = document.createElement("img");
         imgDisplay.src = images[i].src;
+        imgDisplay.style.zIndex = images[i].layer;
         imgDisplay.style.width = "640px";
         imgDisplay.style.height = "640px";
         imgDisplay.style.position = "absolute";
@@ -194,12 +213,12 @@ function displayImg(){
         document.getElementById("img").appendChild(imgDisplay);
     }
 }
-
 function finalScreen(){
     displayImg();
     document.getElementById("question").innerHTML = "Quiz complete!";
     document.getElementById("options").innerHTML = "";
-    document.getElementById("options").innerHTML = "Your answers: " + userAnswers.join(", ");
+    document.getElementById("options").innerHTML = "Your answers: " + displayAnswers.join(", ");
+
 }
 
 window.onload = displayQuestion;

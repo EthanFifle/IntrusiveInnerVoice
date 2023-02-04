@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;V3 commit&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Single colours/Colours_optimism.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestBenchView.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestV1.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Visualizer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Visualizer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,11 +34,11 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="3312c7df-3ae7-4c05-8a9f-b6112a5194be" />
   </component>
@@ -85,7 +86,8 @@
       <option name="presentableId" value="Default" />
       <updated>1675289899462</updated>
       <workItem from="1675289900769" duration="18402000" />
-      <workItem from="1675464332589" duration="15822000" />
+      <workItem from="1675464332589" duration="16106000" />
+      <workItem from="1675490400806" duration="22847000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;First commit&quot;">
       <created>1675293720746</created>
@@ -171,7 +173,28 @@
       <option name="project" value="LOCAL" />
       <updated>1675488244553</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="&quot;V3 commit&quot;">
+      <created>1675489955783</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1675489955783</updated>
+    </task>
+    <task id="LOCAL-00014" summary="&quot;V3 commit&quot;">
+      <created>1675489971594</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1675489971594</updated>
+    </task>
+    <task id="LOCAL-00015" summary="&quot;V3 commit&quot;">
+      <created>1675490028384</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1675490028385</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
