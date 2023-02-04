@@ -98,7 +98,6 @@ function displayQuestion() {
             nextQuestion();
         }
     };
-
 }
 function nextQuestion() {
 
@@ -156,33 +155,33 @@ function layerTwo(indexOne, indexTwo){
         console.error("Image not found: " + src1 + " and " + src2);
     }
 
-    images.push({src: temp, layer: 2 });
+    images.push({src: temp, layer: "2", order: 3});
 
 }
 function allOtherLayers(question, answer, index){
 
     switch(question){
         case 0:
-            images.push({src: "Layer 1 - Bagrounds/" + answer + ".png", layer: 1 });
+            images.push({src: "Layer 1 - Bagrounds/" + answer + ".png", layer: "1", order: 2});
             break;
         case 1:
-            images.push({src: "Layer 2 - Colours/Single colours/Colours_" + answer + ".png", layer: 2 });
+            images.push({src: "Layer 2 - Colours/Single colours/Colours_" + answer + ".png", layer: "2", order: 3});
             break;
         case 2:
             if (index === 0){
-                images.push({src: "Layer 3 - Glows/Glows_warm.png", layer: 3 });
+                images.push({src: "Layer 3 - Glows/Glows_warm.png", layer: "3", order: 4});
             } else {
-                images.push({src: "Layer 3 - Glows/Glows_cold.png", layer: 4 });
+                images.push({src: "Layer 3 - Glows/Glows_cold.png", layer: "3", order: 4});
             }
             break;
         case 3:
-            images.push({src: "Layer 4 - Face Shapes/" + answer + ".png", layer: 5 });
+            images.push({src: "Layer 4 - Face Shapes/" + answer + ".png", layer: "5", order: 1});
             break;
         case 4:
-            images.push({src: "Layer 5 - Eyes/" + answer + ".png", layer: 6 });
+            images.push({src: "Layer 5 - Eyes/" + answer + ".png", layer: "5", order: 5});
             break;
         case 5:
-            images.push({src: "Layer 6 - Mouths/" + answer + ".png", layer: 7 });
+            images.push({src: "Layer 6 - Mouths/" + answer + ".png", layer: "6", order: 6});
             break;
         default:
     }
@@ -196,7 +195,11 @@ function imageExists(image_url) {
 }
 function displayImg(){
 
-    for(let i=0; i<images.length; i++) {
+    images.sort((a, b) => {
+        return a.order - b.order;
+    });
+
+    for (let i = 0; i < images.length; i++) {
         const imgDisplay = document.createElement("img");
         imgDisplay.src = images[i].src;
         imgDisplay.style.zIndex = images[i].layer;
@@ -205,14 +208,33 @@ function displayImg(){
         imgDisplay.style.position = "absolute";
         imgDisplay.style.transition = "all 2s ease-in-out";
         imgDisplay.style.opacity = "0";
+        imgDisplay.style.transform = `translate(${i * 20}px, ${i * 20}px)`;
 
         setTimeout(() => {
             imgDisplay.style.opacity = "1";
-        }, i * 1000);
+            imgDisplay.style.transform = "translate(0, 0)";
+        }, i * 800);
 
         document.getElementById("img").appendChild(imgDisplay);
     }
+
 }
+/*
+function download(image){
+
+    const downloadBtn = document.createElement("button");
+    downloadBtn.innerHTML = "Download";
+    downloadBtn.onclick = function () {
+        const link = document.createElement("a");
+        link.download = `image-${i}.jpeg`;
+        link.href = image;
+        link.click();
+    };
+
+    document.getElementById("download").appendChild(downloadBtn);
+}
+
+ */
 function finalScreen(){
     displayImg();
     document.getElementById("question").innerHTML = "Quiz complete!";
