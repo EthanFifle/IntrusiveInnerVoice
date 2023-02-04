@@ -148,7 +148,6 @@ function layerTwo(comboArray){
 }
 function allOtherLayers(question, answer, index){
 
-
     switch(question){
         case 0:
             images.push({src: "Layer 1 - Bagrounds/" + answer + ".png"});
