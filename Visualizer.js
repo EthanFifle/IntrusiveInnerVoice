@@ -70,7 +70,7 @@ function displayQuestion() {
         if (event.target.type === "radio") {
             userAnswers[currentQuestion] = selectedOption;
             nextQuestion();
-            displayThis(currentQuestion, questions[currentQuestion].options.indexOf(selectedOption));
+            allOtherLayers(currentQuestion, questions[currentQuestion].options.indexOf(selectedOption));
         }else if (event.target.type === "checkbox") {
             const selectedCheckboxes = optionsContainer.querySelectorAll("input[type=checkbox]:checked");
             let subArray = [];
@@ -81,14 +81,14 @@ function displayQuestion() {
 
                 if (selectedCheckboxes.length === 1) {
                     userAnswers[currentQuestion] = selectedOption;
-                    displayThis(currentQuestion, questions[currentQuestion].options.indexOf(selectedOption));
+                    allOtherLayers(currentQuestion, questions[currentQuestion].options.indexOf(selectedOption));
                 } else {
                     selectedCheckboxes.forEach(checkbox => {
                         subArray.push(checkbox.value);
                         combo.push(questions[currentQuestion].options.indexOf(checkbox.value));
                     });
                     userAnswers[currentQuestion] = subArray.join(", ");
-                    questionSpecific(combo);
+                    layerTwo(combo);
                 }
 
 
@@ -125,7 +125,7 @@ function nextQuestion() {
 
 }
 
-function questionSpecific(comboArray){
+function layerTwo(comboArray){
     let opt_1 = comboArray[0] + 1; //+1 to match with option number and pictures
     let opt_2 = comboArray[1] + 1;
 
@@ -146,7 +146,7 @@ function questionSpecific(comboArray){
         images.push({src: image.src});
     }
 }
-function displayThis(question, answer){
+function allOtherLayers(question, answer){
 
     if (question === 0) {
         switch (answer) {
