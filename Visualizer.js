@@ -70,7 +70,7 @@ function displayQuestion() {
         if (event.target.type === "radio") {
             userAnswers[currentQuestion] = selectedOption;
             nextQuestion();
-            allOtherLayers(currentQuestion, questions[currentQuestion].options.indexOf(selectedOption));
+            allOtherLayers(currentQuestion, selectedOption, questions[currentQuestion].options.indexOf(selectedOption));
         }else if (event.target.type === "checkbox") {
             const selectedCheckboxes = optionsContainer.querySelectorAll("input[type=checkbox]:checked");
             let subArray = [];
@@ -81,7 +81,7 @@ function displayQuestion() {
 
                 if (selectedCheckboxes.length === 1) {
                     userAnswers[currentQuestion] = selectedOption;
-                    allOtherLayers(currentQuestion, questions[currentQuestion].options.indexOf(selectedOption));
+                    allOtherLayers(currentQuestion, selectedOption, questions[currentQuestion].options.indexOf(selectedOption));
                 } else {
                     selectedCheckboxes.forEach(checkbox => {
                         subArray.push(checkbox.value);
@@ -146,174 +146,35 @@ function layerTwo(comboArray){
         images.push({src: image.src});
     }
 }
-function allOtherLayers(question, answer){
+function allOtherLayers(question, answer, index){
 
-    if (question === 0) {
-        switch (answer) {
-            case 0:
-                images.push({src: "Layer 1 - Bagrounds/soft.png" });
-                break;
-            case 1:
-                images.push({src: "Layer 1 - Bagrounds/bright.png" });
-                break;
-            case 2:
-                images.push({src: "Layer 1 - Bagrounds/sad.png" });
-                break;
-            case 3:
-                images.push({src: "Layer 1 - Bagrounds/mellow.png" });
-                break;
-            case 4:
-                images.push({src: "Layer 1 - Bagrounds/angry.png" });
-                break;
-            case 5:
-                images.push({src: "Layer 1 - Bagrounds/rough.png" });
-                break;
-            case 6:
-                images.push({src: "Layer 1 - Bagrounds/uptight.png" });
-                break;
-            case 7:
-                images.push({src: "Layer 1 - Bagrounds/smooth.png" });
-                break;
-            case 8:
-                images.push({src: "Layer 1 - Bagrounds/flat.png" });
-                break;
-            case 9:
-                images.push({src: "Layer 1 - Bagrounds/sharp.png" });
-                break;
-            default:
-        }
-    } else if (question === 1){
-        switch(answer){
-            case 0:
-                images.push({src: "Layer 2 - Colours/Single colours/Colours_detached.png" });
-                break;
-            case 1:
-                images.push({src: "Layer 2 - Colours/Single colours/Colours_dependant.png" });
-                break;
-            case 2:
-                images.push({src: "Layer 2 - Colours/Single colours/Colours_tranquil.png" });
-                break;
-            case 3:
-                images.push({src: "Layer 2 - Colours/Single colours/Colours_disgust.png" });
-                break;
-            case 4:
-                images.push({src: "Layer 2 - Colours/Single colours/Colours_authoritative.png" });
-                break;
-            case 5:
-                images.push({src: "Layer 2 - Colours/Single colours/Colours_curious.png" });
-                break;
-            case 6:
-                images.push({src: "Layer 2 - Colours/Single colours/Colours_calm.png" });
-                break;
-            case 7:
-                images.push({src: "Layer 2 - Colours/Single colours/Colours_angry.png" });
-                break;
-            case 8:
-                images.push({src: "Layer 2 - Colours/Single colours/Colours_optimism.png" });
-                break;
-            case 9:
-                images.push({src: "Layer 2 - Colours/Single colours/Colours_joy.png" });
-                break;
-            case 10:
-                images.push({src: "Layer 2 - Colours/Single colours/Colours_trusting.png" });
-                break;
-            case 11:
-                images.push({src: "Layer 2 - Colours/Single colours/Colours_loyal.png" });
-                break;
-            default:
-        }
-    } else if (question === 2){
-        switch(answer){
-            case 0:
+
+    switch(question){
+        case 0:
+            images.push({src: "Layer 1 - Bagrounds/" + answer + ".png"});
+            break;
+        case 1:
+            images.push({src: "Layer 2 - Colours/Single colours/Colours_" + answer + ".png" });
+            break;
+        case 2:
+            if (index === 0){
                 images.push({src: "Layer 3 - Glows/Glows_warm.png" });
-                break;
-            case 1:
+            } else {
                 images.push({src: "Layer 3 - Glows/Glows_cold.png" });
-                break;
-            case 2:
-                images.push({src: "Layer 3 - Glows/Glows_cold.png" });
-                break;
-            default:
-        }
-    } else if (question === 3){
-        switch(answer){
-            case 0:
-                images.push({src: "Layer 4 - Face Shapes/one.png" });
-                break;
-            case 1:
-                images.push({src: "Layer 4 - Face Shapes/two.png" });
-                break;
-            case 2:
-                images.push({src: "Layer 4 - Face Shapes/three.png" });
-                break;
-            case 3:
-                images.push({src: "Layer 4 - Face Shapes/four.png" });
-                break;
-            case 4:
-                images.push({src: "Layer 4 - Face Shapes/five.png" });
-                break;
-            case 5:
-                images.push({src: "Layer 4 - Face Shapes/six.png" });
-                break;
-            case 6:
-                images.push({src: "Layer 4 - Face Shapes/seven.png" });
-                break;
-            default:
-        }
-    } else if (question === 4){
-        switch(answer){
-            case 0:
-                images.push({src: "Layer 5 - Eyes/happy.png" });
-                break;
-            case 1:
-                images.push({src: "Layer 5 - Eyes/sad.png" });
-                break;
-            case 2:
-                images.push({src: "Layer 5 - Eyes/neutral.png" });
-                break;
-            case 3:
-                images.push({src: "Layer 5 - Eyes/angry.png" });
-                break;
-            case 4:
-                images.push({src: "Layer 5 - Eyes/scared.png" });
-                break;
-            case 5:
-                images.push({src: "Layer 5 - Eyes/anxious.png" });
-                break;
-            case 6:
-                images.push({src: "Layer 5 - Eyes/manipulative.png" });
-                break;
-            case 7:
-                images.push({src: "Layer 5 - Eyes/jealous.png" });
-                break;
-            default:
-        }
-    } else {
-        switch(answer){
-            case 0:
-                images.push({src: "Layer 6 - Mouths/one.png" });
-                break;
-            case 1:
-                images.push({src: "Layer 6 - Mouths/two.png" });
-                break;
-            case 2:
-                images.push({src: "Layer 6 - Mouths/three.png" });
-                break;
-            case 3:
-                images.push({src: "Layer 6 - Mouths/four.png" });
-                break;
-            case 4:
-                images.push({src: "Layer 6 - Mouths/five.png" });
-                break;
-            case 5:
-                images.push({src: "Layer 6 - Mouths/six.png" });
-                break;
-            case 6:
-                images.push({src: "Layer 6 - Mouths/seven.png" });
-                break;
-            default:
-        }
+            }
+            break;
+        case 3:
+            images.push({src: "Layer 4 - Face Shapes/" + answer + ".png" });
+            break;
+        case 4:
+            images.push({src: "Layer 5 - Eyes/" + answer + ".png" });
+            break;
+        case 5:
+            images.push({src: "Layer 6 - Mouths/" + answer + ".png" });
+            break;
+        default:
     }
+
 }
 
 function displayImg(){
