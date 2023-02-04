@@ -4,12 +4,77 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;V2 commit&quot;">
+    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;V3 commit&quot;">
       <change afterPath="$PROJECT_DIR$/TestBenchView.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/TestV1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SytleVis.css" beforeDir="false" afterPath="$PROJECT_DIR$/StyleVis.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_angry + joy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_angry + loyal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_angry + optimistic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_angry + trusting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_authoritative + angry.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_authoritative + calm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_authoritative + curious.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_authoritative + joy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_authoritative + optimism.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_authoritative + trusting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_authoritative + untrusting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_calm + angry.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_calm + joy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_calm + loyal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_calm + optimism.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_calm + trusting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_curious + anger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_curious + calm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_curious + joy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_curious + loyal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_curious + optimism.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_curious + trusting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_dependant + angry.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_dependant + authoritative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_dependant + calm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_dependant + curious.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_dependant + disgust.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_dependant + joy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_dependant + optimism.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_dependant + tranquil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_dependant + trusting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_dependant + untrusting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_detached + angry.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_detached + authoritative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_detached + calm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_detached + curious.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_detached + dependant.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_detached + disgust.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_detached + joy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_detached + loyal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_detached + optimism.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_detached + tranquil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_detached + trusting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_disgust + anger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_disgust + authoritative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_disgust + calm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_disgust + curious.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_disgust + joy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_disgust + optimism.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_disgust + trusting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_disgust + untrusting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_joy + loyal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_joy + trusting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_optimistic + joy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_optimistic + loyal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_optimistic + trusting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_tranquil + angry.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_tranquil + authoritative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_tranquil + curious.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_tranquil + disgust.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_tranquil + joy-69.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_tranquil + joy-72.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_tranquil + optimism.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_tranquil + trusting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_tranquil + untrusting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Layer 2 - Colours/Two colours/Colours_trusting + loyal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Visualizer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Visualizer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +139,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675289899462</updated>
       <workItem from="1675289900769" duration="18402000" />
-      <workItem from="1675464332589" duration="4744000" />
+      <workItem from="1675464332589" duration="13465000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;First commit&quot;">
       <created>1675293720746</created>
@@ -125,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675375782592</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="&quot;V3 commit&quot;">
+      <created>1675469439050</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675469439050</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +225,7 @@
     <MESSAGE value="&quot;Second commit&quot;" />
     <MESSAGE value="&quot;First commit&quot;" />
     <MESSAGE value="&quot;V2 commit&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;V2 commit&quot;" />
+    <MESSAGE value="&quot;V3 commit&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;V3 commit&quot;" />
   </component>
 </project>

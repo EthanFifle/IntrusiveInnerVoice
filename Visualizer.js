@@ -1,32 +1,32 @@
 
 const questions = [
     {//1
-        question: "What word best describes the tone of the voice?", //Material for face
+        question: "1. What word best describes the tone of the voice?", //Material for face
         options: ["soft", "bright", "sad", "mellow","angry", "rough", "uptight", "smooth", "flat", "sharp"],
         inputType: "radio"
     },
     {//2
-        question: "When this voice appears, what are your feelings towards it? You can choose up to two feelings", //Colour
+        question: "2. When this voice appears, what are your feelings towards it? You can choose up to two feelings", //Colour
         options: ["detached", "dependant", "tranquil", "disgust", "authoritative", "curious", "calm", "angry", "optimistic", "joy", "trusting", "loyal"],
         inputType: "checkbox"
     },
     {//3
-        question: "How seriously do you take what the voice is telling you? Is it very important or does it have very little meaning?",//Warm or Cool
+        question: "3. How seriously do you take what the voice is telling you? Is it very important or does it have very little meaning?",//Warm or Cool
         options: ["very intrusive", "neutral", "not involved, very hands off"],
         inputType: "radio"
     },
     {//4
-        question: "How strict is the voice? 1 is least strict, 7 is extremely strict.", //Shape of head
+        question: "4. How strict is the voice? 1 is least strict, 7 is extremely strict.", //Shape of head
         options: ["one", "two", "three", "four","five", "six", "seven"],
         inputType: "radio"
     },
     {//5
-        question: "What word best describes the mood that your intrusive inner voice is in?", //Eyes
+        question: "5. What word best describes the mood that your intrusive inner voice is in?", //Eyes
         options: ["happy ", "sad", "neutral", "angry","scared", "anxious", "manipulative", "jealous"],
         inputType: "radio"
     },
     {//6
-        question: "How loud is the voice? 1 is quietest, 7 is loudest.",
+        question: "6. How loud is the voice? 1 is quietest, 7 is loudest.",
         options: ["one", "two", "three", "four","five", "six", "seven"],
         inputType: "radio"
     }
@@ -74,6 +74,7 @@ function displayQuestion() {
         }else if (event.target.type === "checkbox") {
             const selectedCheckboxes = optionsContainer.querySelectorAll("input[type=checkbox]:checked");
             let subArray = [];
+            let combo = [];
 
             if (selectedCheckboxes.length <= 2) {
                 nextQuestion();
@@ -84,8 +85,10 @@ function displayQuestion() {
                 } else {
                     selectedCheckboxes.forEach(checkbox => {
                         subArray.push(checkbox.value);
+                        combo.push(questions[currentQuestion].options.indexOf(checkbox.value));
                     });
-                    userAnswers[currentQuestion] = subArray;
+                    userAnswers[currentQuestion] = subArray.join(", ");
+                    questionSpecific(combo);
                 }
 
 
@@ -122,6 +125,27 @@ function nextQuestion() {
 
 }
 
+function questionSpecific(comboArray){
+    let opt_1 = comboArray[0] + 1; //+1 to match with option number and pictures
+    let opt_2 = comboArray[1] + 1;
+
+    let src1 = "Layer 2 - Colours/Two colours/Colours_" + opt_1 + " + " + opt_2 + ".png";
+    let src2 = "Layer 2 - Colours/Two colours/Colours_" + opt_2 + " + " + opt_1 + ".png";
+
+    let image = new Image();
+    image.src = src1;
+
+    image.onerror = function() {
+        image.src = src2;
+        image.onerror = function() {
+            console.error("Image not found: " + src1 + " and " + src2);
+        }
+    }
+
+    image.onload = function() {
+        images.push({src: image.src});
+    }
+}
 function displayThis(question, answer){
 
     if (question === 0) {
@@ -185,7 +209,7 @@ function displayThis(question, answer){
                 images.push({src: "Layer 2 - Colours/Single colours/Colours_angry.png" });
                 break;
             case 8:
-                images.push({src: "Layer 2 - Colours/Single colours/Colours_optimistic.png" });
+                images.push({src: "Layer 2 - Colours/Single colours/Colours_optimism.png" });
                 break;
             case 9:
                 images.push({src: "Layer 2 - Colours/Single colours/Colours_joy.png" });
@@ -286,7 +310,6 @@ function displayThis(question, answer){
                 break;
             case 6:
                 images.push({src: "Layer 6 - Mouths/seven.png" });
-                displayImg();
                 break;
             default:
         }
