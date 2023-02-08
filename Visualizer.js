@@ -261,7 +261,7 @@ function snipImage(){
         snipIt.innerHTML = "Snip It!"
         snipIt.onclick = function() {
             sneakyImg();
-            setTimeout(saveImage, 3000);
+            setTimeout(saveImage, 1000);
         };
 
         document.getElementById("button").appendChild(snipIt);
