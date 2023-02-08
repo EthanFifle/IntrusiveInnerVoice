@@ -38,6 +38,7 @@ let displayAnswers = [];
 let selectedCheckboxes = [];
 let currentQuestion = 0;
 let nextButtonCreated = false;
+let snipItButtonCreated = false;
 
 function displayQuestion() {
 
@@ -162,26 +163,26 @@ function allOtherLayers(question, answer, index){
 
     switch(question){
         case 0:
-            images.push({src: "Layer 1 - Bagrounds/" + answer + ".png", layer: "1", order: 2});
+            images.push({src: "Layer 1 - Bagrounds/" + answer + ".png", layer: 1, order: 2});
             break;
         case 1:
-            images.push({src: "Layer 2 - Colours/Single colours/Colours_" + answer + ".png", layer: "2", order: 3});
+            images.push({src: "Layer 2 - Colours/Single colours/Colours_" + answer + ".png", layer: 2, order: 3});
             break;
         case 2:
             if (index === 0){
-                images.push({src: "Layer 3 - Glows/Glows_warm.png", layer: "3", order: 4});
+                images.push({src: "Layer 3 - Glows/Glows_warm.png", layer: 3, order: 4});
             } else {
-                images.push({src: "Layer 3 - Glows/Glows_cold.png", layer: "3", order: 4});
+                images.push({src: "Layer 3 - Glows/Glows_cold.png", layer: 3, order: 4});
             }
             break;
         case 3:
-            images.push({src: "Layer 4 - Face Shapes/" + answer + ".png", layer: "5", order: 1});
+            images.push({src: "Layer 4 - Face Shapes/" + answer + ".png", layer: 5, order: 1});
             break;
         case 4:
-            images.push({src: "Layer 5 - Eyes/" + answer + ".png", layer: "5", order: 5});
+            images.push({src: "Layer 5 - Eyes/" + answer + ".png", layer: 5, order: 5});
             break;
         case 5:
-            images.push({src: "Layer 6 - Mouths/" + answer + ".png", layer: "6", order: 6});
+            images.push({src: "Layer 6 - Mouths/" + answer + ".png", layer: 6, order: 6});
             break;
         default:
     }
@@ -199,6 +200,7 @@ function displayImg(){
         return a.order - b.order;
     });
 
+
     for (let i = 0; i < images.length; i++) {
         const imgDisplay = document.createElement("img");
         imgDisplay.src = images[i].src;
@@ -214,29 +216,67 @@ function displayImg(){
         document.getElementById("img").appendChild(imgDisplay);
     }
 
+    snipItButtonCreated = true;
 }
-/*
-function download(image){
+function sneakyImg(){
 
-    const downloadBtn = document.createElement("button");
-    downloadBtn.innerHTML = "Download";
-    downloadBtn.onclick = function () {
-        const link = document.createElement("a");
-        link.download = `image-${i}.jpeg`;
-        link.href = image;
-        link.click();
-    };
+    document.getElementById("img").innerHTML = "";
 
-    document.getElementById("download").appendChild(downloadBtn);
+    images.sort((a, b) => {
+        return a.layer - b.layer;
+    });
+
+    const canvas = document.createElement("canvas");
+    canvas.width = 640;
+    canvas.height = 640;
+
+
+    for (let i = 0; i < images.length; i++){
+        const ctx = canvas.getContext("2d");
+        const image = new Image();
+        image.src = images[i].src;
+
+        image.onload = function() {
+            ctx.drawImage(image, 0, 0);
+        };
+
+        document.getElementById("img").appendChild(canvas);
+    }
+
+}
+function saveImage() {
+
+    const canvas = document.querySelector("canvas");
+    const dataURL = canvas.toDataURL();
+
+    const link = document.createElement("a");
+    link.href = dataURL;
+    link.download = "IntrusiveInnerVoice.png";
+    link.click();
+}
+function snipImage(){
+
+    if(snipItButtonCreated){
+        const snipIt = document.createElement("button");
+        snipIt.innerHTML = "Snip It!"
+        snipIt.onclick = function() {
+            sneakyImg();
+            setTimeout(saveImage, 3000);
+        };
+
+        document.getElementById("button").appendChild(snipIt);
+    }
+
 }
 
- */
+
 function finalScreen(){
-    displayImg();
     document.getElementById("question").innerHTML = "Quiz complete!";
     document.getElementById("options").innerHTML = "";
     document.getElementById("options").innerHTML = "Your answers: " + displayAnswers.join(", ");
+    displayImg();
+    setTimeout(snipImage, 7000);
 
 }
 
-window.onload = displayQuestion;
+window.onload =  displayQuestion;

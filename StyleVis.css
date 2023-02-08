@@ -23,3 +23,8 @@
     opacity: 1;
     transform: translate(0, 0);
 }
+
+.button {
+    position: relative;
+    bottom: 20%;
+}
