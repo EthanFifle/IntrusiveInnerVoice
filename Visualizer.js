@@ -203,11 +203,7 @@ function displayImg(){
         const imgDisplay = document.createElement("img");
         imgDisplay.src = images[i].src;
         imgDisplay.style.zIndex = images[i].layer;
-        imgDisplay.style.width = "640px";
-        imgDisplay.style.height = "640px";
-        imgDisplay.style.position = "absolute";
-        imgDisplay.style.transition = "all 2s ease-in-out";
-        imgDisplay.style.opacity = "0";
+        imgDisplay.className = "imgDisplay";
         imgDisplay.style.transform = `translate(${i * 20}px, ${i * 20}px)`;
 
         setTimeout(() => {

@@ -9,3 +9,17 @@
         transform: translateY(0);
     }
 }
+.imgDisplay {
+    width: 640px;
+    height: 640px;
+    position: absolute;
+    transition: all 2s ease-in-out;
+    opacity: 0;
+    border-radius: 120px;
+    border: 5px solid #FFF;
+}
+
+.imgDisplay.loaded {
+    opacity: 1;
+    transform: translate(0, 0);
+}
