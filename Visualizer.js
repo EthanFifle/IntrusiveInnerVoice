@@ -51,7 +51,7 @@ function displayQuestion() {
             (option, index) => {
                 let inputType = questions[currentQuestion].inputType === "checkbox" ? "checkbox" : "radio";
                 return `<label id="label-${index}" class="option-label">
-                        <input type="${inputType}" name="answer" value="${option}">${option}
+                        <input class="radio-label" type="${inputType}" name="answer" value="${option}"> ${option}
                         </label><br>`
             }
         )
@@ -163,7 +163,7 @@ function allOtherLayers(question, answer, index){
 
     switch(question){
         case 0:
-            images.push({src: "Layer 1 - Bagrounds/" + answer + ".png", layer: 1, order: 2});
+            images.push({src: "Layer 1 - Backgrounds/" + answer + ".png", layer: 1, order: 2});
             break;
         case 1:
             images.push({src: "Layer 2 - Colours/Single colours/Colours_" + answer + ".png", layer: 2, order: 3});
@@ -171,7 +171,8 @@ function allOtherLayers(question, answer, index){
         case 2:
             if (index === 0){
                 images.push({src: "Layer 3 - Glows/Glows_warm.png", layer: 3, order: 4});
-            } else {
+            }
+            if (index === 2) {
                 images.push({src: "Layer 3 - Glows/Glows_cold.png", layer: 3, order: 4});
             }
             break;
@@ -243,6 +244,8 @@ function sneakyImg(){
         document.getElementById("img").appendChild(canvas);
     }
 
+    snipImage();
+
 }
 function saveImage() {
 
@@ -260,22 +263,19 @@ function snipImage(){
         const snipIt = document.createElement("button");
         snipIt.innerHTML = "Snip It!"
         snipIt.onclick = function() {
-            sneakyImg();
-            setTimeout(saveImage, 1000);
+            saveImage();
         };
 
         document.getElementById("button").appendChild(snipIt);
     }
 
 }
-
-
 function finalScreen(){
     document.getElementById("question").innerHTML = "Quiz complete!";
     document.getElementById("options").innerHTML = "";
     document.getElementById("options").innerHTML = "Your answers: " + displayAnswers.join(", ");
     displayImg();
-    setTimeout(snipImage, 7000);
+    setTimeout(sneakyImg, 7000);
 
 }
 
