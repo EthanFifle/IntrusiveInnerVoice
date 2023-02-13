@@ -7,7 +7,7 @@ const questions = [
     },
     {//2
         question: "2. When this voice appears, what are your feelings towards it? You can choose up to two feelings", //Colour
-        options: ["detached", "dependant", "tranquil", "disgust", "authoritative", "curious", "calm", "angry", "optimistic", "joy", "trusting", "loyal"],
+        options: ["detached", "dependant", "tranquil", "disgust", "assertive", "curious", "calm", "angry", "optimistic", "joy", "trusting", "loyal"],
         inputType: "checkbox"
     } ,
     {//3
@@ -270,11 +270,45 @@ function snipImage(){
     }
 
 }
+function highlight(){
+    for(let i = 0; i < userAnswers.length; i++){
+
+        if(i === 1){
+            if(selectedCheckboxes.length === 2){
+                let opt1Index = userAnswers[i][0].index;
+                let opt2Index = userAnswers[i][1].index;
+                const getText1 = document.getElementById(i + "." + opt1Index);
+                const getText2 = document.getElementById(i + "." + opt2Index);
+                highlightText(getText1);
+                highlightText(getText2);
+            }else{
+                let optOne = userAnswers[i][0].index;
+                const getText = document.getElementById(i + "." + optOne);
+                highlightText(getText);
+            }
+
+        }else{
+            let optionIndex = userAnswers[i].index;
+            const getText = document.getElementById(i + "." + optionIndex);
+            highlightText(getText);
+        }
+
+    }
+}
+function highlightText(highlight){
+
+    highlight.style.fontStyle = "italic";
+    highlight.style.textDecorationLine = "underline";
+    highlight.style.textDecorationColor = "black";
+    //highlight.style.background = "linear-gradient(to top, gold 50%, transparent 50%)";
+
+}
 function finalScreen(){
     document.getElementById("question").innerHTML = "Quiz complete!";
     document.getElementById("options").innerHTML = "";
     document.getElementById("options").innerHTML = "Your answers: " + displayAnswers.join(", ");
     displayImg();
+    highlight();
     setTimeout(sneakyImg, 7000);
 
 }
