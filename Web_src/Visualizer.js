@@ -144,8 +144,8 @@ function createImg(){
 function layerTwo(indexOne, indexTwo){
     let opt_1 = indexOne + 1; //+1 to match with option number and pictures
     let opt_2 = indexTwo + 1;
-    let src1 = "Layer 2 - Colours/Two colours/Colours_" + opt_1 + " + " + opt_2 + ".png";
-    let src2 = "Layer 2 - Colours/Two colours/Colours_" + opt_2 + " + " + opt_1 + ".png";
+    let src1 = "../Image_src/Layer 2 - Colours/Two colours/Colours_" + opt_1 + " + " + opt_2 + ".png";
+    let src2 = "../Image_src/Layer 2 - Colours/Two colours/Colours_" + opt_2 + " + " + opt_1 + ".png";
 
     let temp = [];
     if (imageExists(src1)) {
@@ -163,27 +163,27 @@ function allOtherLayers(question, answer, index){
 
     switch(question){
         case 0:
-            images.push({src: "Layer 1 - Backgrounds/" + answer + ".png", layer: 1, order: 2});
+            images.push({src: "../Image_src/Layer 1 - Backgrounds/" + answer + ".png", layer: 1, order: 2});
             break;
         case 1:
-            images.push({src: "Layer 2 - Colours/Single colours/Colours_" + answer + ".png", layer: 2, order: 3});
+            images.push({src: "../Image_src/Layer 2 - Colours/Single colours/Colours_" + answer + ".png", layer: 2, order: 3});
             break;
         case 2:
             if (index === 0){
-                images.push({src: "Layer 3 - Glows/Glows_warm.png", layer: 3, order: 4});
+                images.push({src: "../Image_src/Layer 3 - Glows/Glows_warm.png", layer: 3, order: 4});
             }
             if (index === 2) {
-                images.push({src: "Layer 3 - Glows/Glows_cold.png", layer: 3, order: 4});
+                images.push({src: "../Image_src/Layer 3 - Glows/Glows_cold.png", layer: 3, order: 4});
             }
             break;
         case 3:
-            images.push({src: "Layer 4 - Face Shapes/" + answer + ".png", layer: 5, order: 1});
+            images.push({src: "../Image_src/Layer 4 - Face Shapes/" + answer + ".png", layer: 5, order: 1});
             break;
         case 4:
-            images.push({src: "Layer 5 - Eyes/" + answer + ".png", layer: 5, order: 5});
+            images.push({src: "../Image_src/Layer 5 - Eyes/" + answer + ".png", layer: 5, order: 5});
             break;
         case 5:
-            images.push({src: "Layer 6 - Mouths/" + answer + ".png", layer: 6, order: 6});
+            images.push({src: "../Image_src/Layer 6 - Mouths/" + answer + ".png", layer: 6, order: 6});
             break;
         default:
     }
@@ -300,7 +300,6 @@ function highlightText(highlight){
     highlight.style.fontStyle = "italic";
     highlight.style.textDecorationLine = "underline";
     highlight.style.textDecorationColor = "black";
-    //highlight.style.background = "linear-gradient(to top, gold 50%, transparent 50%)";
 
 }
 function finalScreen(){
