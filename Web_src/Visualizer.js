@@ -249,6 +249,34 @@ function sneakyImg(){
 }
 function saveImage() {
 
+    const data = {
+        Index1: userAnswers[0].index,
+        Ans1: userAnswers[0].answer,
+
+        Index2a: selectedCheckboxes[0].index,
+        Ans2a: selectedCheckboxes[0].answer,
+
+        Index2b: selectedCheckboxes[1].index,
+        Ans2b: selectedCheckboxes[1].answer,
+
+        Index3: userAnswers[2].index,
+        Ans3: userAnswers[2].answer,
+
+        Index4: userAnswers[3].index,
+        Ans4: userAnswers[3].answer,
+
+        Index5: userAnswers[4].index,
+        Ans5: userAnswers[4].answer,
+
+        Index6: userAnswers[5].index,
+        Ans6: userAnswers[5].answer
+    };
+
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "Web_src/DbConnect.php", true);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.send(JSON.stringify(data));
+  /*
     const canvas = document.querySelector("canvas");
     const dataURL = canvas.toDataURL();
 
@@ -256,6 +284,8 @@ function saveImage() {
     link.href = dataURL;
     link.download = "IntrusiveInnerVoice.png";
     link.click();
+
+   */
 }
 function snipImage(){
 
