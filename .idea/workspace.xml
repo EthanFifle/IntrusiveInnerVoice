@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;V5 commit&quot;">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DbConnect.php" afterDir="false" />
+    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;V6 commit&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web_src/Visualizer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Web_src/Visualizer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +40,7 @@
   }
 }</component>
   <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="b0e234a8-80e5-4388-9a77-9dec96d84645" />
+    <option name="defaultAccountId" value="3312c7df-3ae7-4c05-8a9f-b6112a5194be" />
   </component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
@@ -84,7 +80,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "vcs.Git",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -119,7 +115,7 @@
       <workItem from="1676165934193" duration="3521000" />
       <workItem from="1676259393064" duration="8745000" />
       <workItem from="1677802165421" duration="4939000" />
-      <workItem from="1678992340417" duration="4389000" />
+      <workItem from="1678992340417" duration="5526000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;First commit&quot;">
       <created>1675293720746</created>
@@ -296,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677812230577</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="&quot;V6 commit&quot;">
+      <created>1678998324906</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1678998324906</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,6 +330,7 @@
     <MESSAGE value="&quot;V3 commit&quot;" />
     <MESSAGE value="&quot;V4 commit&quot;" />
     <MESSAGE value="&quot;V5 commit&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;V5 commit&quot;" />
+    <MESSAGE value="&quot;V6 commit&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;V6 commit&quot;" />
   </component>
 </project>

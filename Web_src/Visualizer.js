@@ -249,7 +249,7 @@ function sneakyImg(){
 }
 function saveImage() {
 
-    const data = {
+    let data = {
         Index1: userAnswers[0].index,
         Ans1: userAnswers[0].answer,
 
@@ -272,8 +272,8 @@ function saveImage() {
         Ans6: userAnswers[5].answer
     };
 
-    const xhr = new XMLHttpRequest();
-    xhr.open("POST", "Web_src/DbConnect.php", true);
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "DbConnect.php", true);
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhr.send(JSON.stringify(data));
   /*
