@@ -272,29 +272,21 @@ function saveImage() {
         Ans6: userAnswers[5].answer
     };
 
+
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "DbConnect.php", true);
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhr.send(JSON.stringify(data));
-  /*
-    const canvas = document.querySelector("canvas");
-    const dataURL = canvas.toDataURL();
 
-    const link = document.createElement("a");
-    link.href = dataURL;
-    link.download = "IntrusiveInnerVoice.png";
-    link.click();
-
-   */
 }
 function snipImage(){
 
     if(snipItButtonCreated){
         const snipIt = document.createElement("button");
         snipIt.innerHTML = "Snip It!"
-        snipIt.onclick = function() {
+        snipIt.addEventListener("click", function() {
             saveImage();
-        };
+        });
 
         document.getElementById("button").appendChild(snipIt);
     }
