@@ -247,7 +247,7 @@ function saveImage(){
 
     if(snipItButtonCreated){
         const snipIt = document.createElement("button");
-        snipIt.innerHTML = "Snip It!"
+        snipIt.innerHTML = "Send to Database"
         snipIt.onclick = function() {
             let xhr = new XMLHttpRequest();
             xhr.open("POST", "DbConnect.php", true);
