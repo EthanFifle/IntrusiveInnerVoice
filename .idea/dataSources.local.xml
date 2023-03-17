@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-223.8617.56">
-    <data-source name="intrusiveinnervoice@localhost" uuid="bd033255-6fb8-49da-bc7c-ccc784d786f6">
-      <database-info product="MySQL" version="8.0.32" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.25 (Revision: 08be9e9b4cba6aa115f9b27b215887af40b159e0)" dbms="MYSQL" exact-version="8.0.32" exact-driver-version="8.0">
+    <data-source name="@remotehost" uuid="da811b23-9fa1-4f82-b99d-7e5f7a4f0d2b">
+      <database-info product="MariaDB" version="10.6.12-MariaDB-cll-lve" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="3.0.7" dbms="MARIADB" exact-version="10.6.12" exact-driver-version="3.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
-      <user-name>root</user-name>
+      <user-name>u880453721_myahwills</user-name>
       <schema-mapping>
         <introspection-scope>
           <node kind="schema" qname="@" />
