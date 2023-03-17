@@ -284,9 +284,9 @@ function snipImage(){
     if(snipItButtonCreated){
         const snipIt = document.createElement("button");
         snipIt.innerHTML = "Snip It!"
-        snipIt.addEventListener("click", function() {
+        snipIt.onclick = function() {
             saveImage();
-        });
+        };
 
         document.getElementById("button").appendChild(snipIt);
     }

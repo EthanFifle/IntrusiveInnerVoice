@@ -15,9 +15,10 @@ if (!$conn) {
 
 }
 // Get data from JavaScript
-$data = json_decode(file_get_contents("php://input"));
+$data = json_decode(file_get_contents("php://input"),true);
 
 // Insert data into database
+/*
 $sql = "INSERT INTO Image_Builder (Q1_Index, Q1_Ans,
                                    Q2a_Index, Q2a_Ans,
                                    Q2b_Index, Q2b_Ans,
@@ -38,6 +39,15 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
+*/
+
+echo "Question 1 Index: " . $data->Index1 . "Answer: " . $data->Ans1 . ".";
+echo "Question 2a) Index: " . $data->Index2a . "Answer: " . $data->Ans2a . ".";
+echo "Question 2b) Index: " . $data->Index2b . "Answer: " . $data->Ans2b . ".";
+echo "Question 3 Index: " . $data->Index3 . "Answer: " . $data->Ans3 . ".";
+echo "Question 4 Index: " . $data->Index4 . "Answer: " . $data->Ans4 . ".";
+echo "Question 5 Index: " . $data->Index5 . "Answer: " . $data->Ans5 . ".";
+echo "Question 6 Index: " . $data->Index6 . "Answer: " . $data->Ans6 . ".";
 
 $conn->close();
 
