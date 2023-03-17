@@ -219,35 +219,8 @@ function displayImg(){
 
     snipItButtonCreated = true;
 }
-function sneakyImg(){
 
-    document.getElementById("img").innerHTML = "";
-
-    images.sort((a, b) => {
-        return a.layer - b.layer;
-    });
-
-    const canvas = document.createElement("canvas");
-    canvas.width = 640;
-    canvas.height = 640;
-
-
-    for (let i = 0; i < images.length; i++){
-        const ctx = canvas.getContext("2d");
-        const image = new Image();
-        image.src = images[i].src;
-
-        image.onload = function() {
-            ctx.drawImage(image, 0, 0);
-        };
-
-        document.getElementById("img").appendChild(canvas);
-    }
-
-    snipImage();
-
-}
-function saveImage() {
+function saveImage(){
 
     let data = {
         Index1: userAnswers[0].index,
@@ -272,20 +245,14 @@ function saveImage() {
         Ans6: userAnswers[5].answer
     };
 
-
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", "DbConnect.php", true);
-    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    xhr.send(JSON.stringify(data));
-
-}
-function snipImage(){
-
     if(snipItButtonCreated){
         const snipIt = document.createElement("button");
         snipIt.innerHTML = "Snip It!"
         snipIt.onclick = function() {
-            saveImage();
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", "DbConnect.php", true);
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr.send(JSON.stringify(data));
         };
 
         document.getElementById("button").appendChild(snipIt);
@@ -330,7 +297,7 @@ function finalScreen(){
     document.getElementById("options").innerHTML = "Your answers: " + displayAnswers.join(", ");
     displayImg();
     highlight();
-    setTimeout(sneakyImg, 7000);
+    setTimeout(saveImage, 7000);
 
 }
 
