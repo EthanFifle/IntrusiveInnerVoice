@@ -651,6 +651,7 @@ body {
     line-height: 20px;
 }
 
+
 .imgDisplay {
     width: 640px;
     height: 640px;
@@ -697,6 +698,19 @@ body {
     width: 640px;
     height: 640px;
     margin: 40px auto;
+    float: none;
+    clear: none;
+    background-color: transparent;
+}
+
+.div-block-5 {
+    position: static;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 640px;
+    height: 40px;
+    margin: 20px auto;
     float: none;
     clear: none;
     background-color: transparent;

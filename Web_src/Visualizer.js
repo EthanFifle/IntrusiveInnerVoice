@@ -34,12 +34,22 @@ const questions = [
 
 const images = [];
 const userAnswers = [];
+let databaseAns = [];
 let displayAnswers = [];
 let selectedCheckboxes = [];
 let currentQuestion = 0;
 let nextButtonCreated = false;
-let snipItButtonCreated = false;
+let uuidIdentifier = create_UUID();
 
+function create_UUID(){
+    let dt = new Date().getTime();
+    let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        let r = (dt + Math.random() * 16) % 16 | 0;
+        dt = Math.floor(dt / 16);
+        return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+    });
+    return uuid;
+}
 function displayQuestion() {
 
     const questionContainer = document.getElementById("question");
@@ -74,6 +84,7 @@ function displayQuestion() {
         if (event.target.type === "radio") {
             if (selectedOption) {
                 userAnswers[currentQuestion] = {answer: selectedOption, index: optionIndex};
+                databaseAns.push({p_ID: uuidIdentifier, q_index: currentQuestion + 1, a_index: optionIndex + 1, answer: selectedOption});
                 displayAnswers[currentQuestion] = selectedOption;
                 nextQuestion();
             }
@@ -82,20 +93,24 @@ function displayQuestion() {
             if (selected.length <= 2){
                 if (event.target.checked) {
                     selectedCheckboxes.push({answer: selectedOption, index: optionIndex});
+                    databaseAns.push({p_ID: uuidIdentifier, q_index: currentQuestion + 1, a_index: optionIndex + 1, answer: selectedOption});
                     if (selectedCheckboxes.length > 2) {
                         selectedCheckboxes.shift();
+                        databaseAns.shift();
                     }
                 } else if (!event.target.checked) {
                     const indexToRemove = selectedCheckboxes.findIndex(
                         option => option.answer === selectedOption
                     );
                     selectedCheckboxes.splice(indexToRemove, 1);
+                    databaseAns.splice(indexToRemove, 1);
                 }
                 userAnswers[currentQuestion] = selectedCheckboxes;
                 displayAnswers[currentQuestion] = selectedCheckboxes.map(option => option.answer).join(", ");
             } else {
                 event.target.checked = false;
             }
+
             nextQuestion();
         }
     };
@@ -217,58 +232,6 @@ function displayImg(){
         document.getElementById("img").appendChild(imgDisplay);
     }
 
-    snipItButtonCreated = true;
-}
-function sneakyImg(){
-
-    document.getElementById("img").innerHTML = "";
-
-    images.sort((a, b) => {
-        return a.layer - b.layer;
-    });
-
-    const canvas = document.createElement("canvas");
-    canvas.width = 640;
-    canvas.height = 640;
-
-
-    for (let i = 0; i < images.length; i++){
-        const ctx = canvas.getContext("2d");
-        const image = new Image();
-        image.src = images[i].src;
-
-        image.onload = function() {
-            ctx.drawImage(image, 0, 0);
-        };
-
-        document.getElementById("img").appendChild(canvas);
-    }
-
-    snipImage();
-
-}
-function saveImage() {
-
-    const canvas = document.querySelector("canvas");
-    const dataURL = canvas.toDataURL();
-
-    const link = document.createElement("a");
-    link.href = dataURL;
-    link.download = "IntrusiveInnerVoice.png";
-    link.click();
-}
-function snipImage(){
-
-    if(snipItButtonCreated){
-        const snipIt = document.createElement("button");
-        snipIt.innerHTML = "Snip It!"
-        snipIt.onclick = function() {
-            saveImage();
-        };
-
-        document.getElementById("button").appendChild(snipIt);
-    }
-
 }
 function highlight(){
     for(let i = 0; i < userAnswers.length; i++){
@@ -302,13 +265,34 @@ function highlightText(highlight){
     highlight.style.textDecorationColor = "black";
 
 }
+function submitQuiz() {
+
+    const submitBtn = document.getElementById("submitButton");
+    submitBtn.style.display = "block";
+
+    submitBtn.addEventListener("click", function () {
+        // Send databaseAns to PHP script
+        const xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+                console.log(this.responseText);
+            }
+        };
+        xhttp.open("POST", "DbConnect.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("databaseAns=" + JSON.stringify(databaseAns));
+        submitBtn.style.display = "none";
+        document.getElementById("finalText").style.display = "block";
+    });
+
+}
 function finalScreen(){
     document.getElementById("question").innerHTML = "Quiz complete!";
     document.getElementById("options").innerHTML = "";
     document.getElementById("options").innerHTML = "Your answers: " + displayAnswers.join(", ");
     displayImg();
     highlight();
-    setTimeout(sneakyImg, 7000);
+    setTimeout(submitQuiz, 7000);
 
 }
 
