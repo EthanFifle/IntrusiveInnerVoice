@@ -268,11 +268,18 @@ function highlightText(highlight){
 }
 function submitQuiz() {
 
+
+
     const submitBtn = document.getElementById("submitButton");
     submitBtn.style.display = "block";
 
     submitBtn.addEventListener("click", function () {
         // Send databaseAns to PHP script
+        const dateTime = new Date();
+        const options = { month: 'numeric', day: 'numeric', year: 'numeric' };
+        const date = dateTime.toLocaleDateString('en-US', options).replace(/\//g, '-');
+        const time = dateTime.toLocaleTimeString('en-US');
+
         const xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
@@ -281,7 +288,7 @@ function submitQuiz() {
         };
         xhttp.open("POST", "DbConnect.php", true);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhttp.send("databaseAns=" + JSON.stringify(databaseAns));
+        xhttp.send("databaseAns=" + JSON.stringify(databaseAns) + "&date=" + date + "&time=" + time);
         submitBtn.style.display = "none";
         document.getElementById("finalText").style.display = "block";
     });

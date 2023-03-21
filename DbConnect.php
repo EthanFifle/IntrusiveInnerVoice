@@ -14,6 +14,8 @@ if (!$conn) {
 
 // Get the submitted answers
 $databaseAns = json_decode($_POST['databaseAns'], true);
+$date = $_POST['date'];
+$time = $_POST['time'];
 
 // Loop through the answers and insert them into the database
 foreach ($databaseAns as $answer) {
@@ -25,12 +27,14 @@ foreach ($databaseAns as $answer) {
 
     // Sanitize the inputs to prevent SQL injection attacks
     $uniqueID = mysqli_real_escape_string($conn, $uniqueID);
+    $date = mysqli_real_escape_string($conn, $date);
+    $time = mysqli_real_escape_string($conn, $time);
     $questionIndex = mysqli_real_escape_string($conn, $questionIndex);
     $answerIndex = mysqli_real_escape_string($conn, $answerIndex);
     $answerString = mysqli_real_escape_string($conn, $answerString);
 
     // Build and execute the SQL query to insert the answer
-    $sql = " INSERT INTO test_table (p_ID, q_index, a_index, a_string) VALUES ('$uniqueID','$questionIndex', '$answerIndex', '$answerString')";
+    $sql = " INSERT INTO ImageBuilder (p_ID, _date, _time, q_index, a_index, a_string) VALUES ('$uniqueID','$date','$time','$questionIndex','$answerIndex','$answerString')";
     if (mysqli_query($conn, $sql)) {
         echo "New record created successfully";
     } else {
