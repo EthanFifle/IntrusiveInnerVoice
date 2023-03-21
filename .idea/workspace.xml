@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;V2 mobile update&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;Database update V3&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DbConnect.php" beforeDir="false" afterPath="$PROJECT_DIR$/DbConnect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web_src/Visualizer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Web_src/Visualizer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +131,7 @@
       <workItem from="1679347414152" duration="34000" />
       <workItem from="1679348623248" duration="4465000" />
       <workItem from="1679407039278" duration="7390000" />
-      <workItem from="1679415502318" duration="15187000" />
+      <workItem from="1679415502318" duration="17270000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;First commit&quot;">
       <created>1675293720746</created>
@@ -415,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679432281086</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="&quot;Database update V3&quot;">
+      <created>1679435754144</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1679435754145</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,6 +454,7 @@
     <MESSAGE value="&quot;V7 commit&quot;" />
     <MESSAGE value="&quot;V1 mobile update&quot;" />
     <MESSAGE value="&quot;V2 mobile update&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;V2 mobile update&quot;" />
+    <MESSAGE value="&quot;Database update V3&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Database update V3&quot;" />
   </component>
 </project>

@@ -505,6 +505,7 @@ figcaption {
     text-align: center
 }
 
+/*noinspection ALL*/
 ul, ol {
     margin-top: 0px;
     margin-bottom: 10px;
@@ -749,6 +750,7 @@ label {
     width: 100%
 }
 
+/*noinspection ALL*/
 .w-richtext figure div {
     font-size: 0px;
     color: transparent
@@ -839,6 +841,7 @@ body {
 }
 
 
+/*noinspection ALL*/
 .imgDisplay {
     width: 640px;
     height: 640px;
@@ -849,6 +852,7 @@ body {
     border: 5px solid #FFF;
 }
 
+/*noinspection ALL*/
 .imgDisplay.loaded {
     opacity: 1;
     transform: translate(0, 0);
@@ -871,7 +875,9 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+/*noinspection ALL*/
 .container-9 {
+    /*noinspection CssRedundantUnit*/
     margin-top: 0px;
     margin-bottom: 0px;
 }
@@ -925,6 +931,7 @@ body {
 }
 
 
+/*noinspection ALL*/
 .container-11 {
     margin-top: 40px;
     margin-bottom: 0px;
@@ -945,10 +952,12 @@ body {
     line-height: 40px;
 }
 
+/*noinspection ALL*/
 .columns {
     margin-bottom: 0px;
 }
 
+/*noinspection ALL*/
 .paragraph-15 {
     display: inline;
     margin-left: 0px;
@@ -964,6 +973,7 @@ body {
     padding-top: 28px;
 }
 
+/*noinspection ALL*/
 .column-14 {
     padding-top: 28px;
     padding-right: 0px;
@@ -992,6 +1002,7 @@ body {
         margin-bottom: 40px;
     }
 
+    /*noinspection ALL*/
     .div-block-6 {
         width: 568px;
         height: 100vw;
@@ -999,6 +1010,7 @@ body {
         margin-left: 0px;
     }
 
+    /*noinspection ALL*/
     .div-block-5 {
         width: 568px;
         height:40vw;
@@ -1007,6 +1019,7 @@ body {
     }
 
 
+    /*noinspection ALL*/
     .column-11 {
         display: -webkit-box;
         display: -webkit-flex;
@@ -1044,6 +1057,7 @@ body {
         line-height: 10px;
     }
 
+    /*noinspection ALL*/
     .container-11 {
         padding-top: 0px;
         padding-bottom: 0px;
@@ -1088,6 +1102,7 @@ body {
         line-height: 17px
     }
 
+    /*noinspection ALL*/
     .columns {
         margin-bottom: 0px;
         padding-bottom: 0px;
@@ -1097,6 +1112,7 @@ body {
         display: block;
     }
 
+    /*noinspection ALL*/
     .imgDisplay {
         width: 320px;
         height: 320px;
