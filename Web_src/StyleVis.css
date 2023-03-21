@@ -829,7 +829,7 @@ label {
 }
 
 /* ==========================================================================
-   Start of custom Webflow CSS
+   Start of custom CSS
    ========================================================================== */
 body {
     font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
@@ -1102,6 +1102,7 @@ body {
         height: 320px;
         margin-left: 8vw;
         position: absolute;
+        border:3px solid #FFF;
         transition: all 2s ease-in-out;
         opacity: 0
     }
