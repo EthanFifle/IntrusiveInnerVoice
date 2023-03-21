@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;V1 mobile update&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;V2 mobile update&quot;">
       <change beforePath="$PROJECT_DIR$/Web_src/StyleVis.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web_src/StyleVis.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web_src/Visualizer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Web_src/Visualizer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +124,7 @@
       <workItem from="1679347414152" duration="34000" />
       <workItem from="1679348623248" duration="4465000" />
       <workItem from="1679407039278" duration="7390000" />
-      <workItem from="1679415502318" duration="9955000" />
+      <workItem from="1679415502318" duration="10265000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;First commit&quot;">
       <created>1675293720746</created>
@@ -374,7 +371,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679420755829</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="&quot;V2 mobile update&quot;">
+      <created>1679426316879</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1679426316879</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,6 +411,7 @@
     <MESSAGE value="&quot;V5 commit&quot;" />
     <MESSAGE value="&quot;V7 commit&quot;" />
     <MESSAGE value="&quot;V1 mobile update&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;V1 mobile update&quot;" />
+    <MESSAGE value="&quot;V2 mobile update&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;V2 mobile update&quot;" />
   </component>
 </project>
