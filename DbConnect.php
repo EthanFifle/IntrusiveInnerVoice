@@ -3,7 +3,7 @@
 $servername = "localhost";
 $database = "intrusiveinnervoice";
 $username = "root";
-$password = "MyDataConnect01$";
+$password = "password";
 
 $conn = mysqli_connect("localhost", $username, $password, $database);
 
