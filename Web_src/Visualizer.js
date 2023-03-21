@@ -119,6 +119,7 @@ function nextQuestion() {
 
     if(!nextButtonCreated){
         const nextButton = document.createElement("button");
+        nextButton.className = "Button";
         nextButton.innerHTML = (currentQuestion === questions.length - 1) ? "Finish" : "Next";
         nextButtonCreated = true;
         nextButton.onclick = function() {

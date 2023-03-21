@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;V7 commit&quot;">
+    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;V1 mobile update&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web_src/StyleVis.css" beforeDir="false" afterPath="$PROJECT_DIR$/Web_src/StyleVis.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web_src/Visualizer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Web_src/Visualizer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +127,7 @@
       <workItem from="1679347414152" duration="34000" />
       <workItem from="1679348623248" duration="4465000" />
       <workItem from="1679407039278" duration="7390000" />
-      <workItem from="1679415502318" duration="4515000" />
+      <workItem from="1679415502318" duration="9955000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;First commit&quot;">
       <created>1675293720746</created>
@@ -366,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679414528899</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="&quot;V1 mobile update&quot;">
+      <created>1679420755828</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1679420755829</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,6 +406,7 @@
     <MESSAGE value="&quot;V4 commit&quot;" />
     <MESSAGE value="&quot;V5 commit&quot;" />
     <MESSAGE value="&quot;V7 commit&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;V7 commit&quot;" />
+    <MESSAGE value="&quot;V1 mobile update&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;V1 mobile update&quot;" />
   </component>
 </project>
