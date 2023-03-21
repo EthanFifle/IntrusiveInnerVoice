@@ -30,7 +30,7 @@ foreach ($databaseAns as $answer) {
     $answerString = mysqli_real_escape_string($conn, $answerString);
 
     // Build and execute the SQL query to insert the answer
-    $sql = "INSERT INTO test_table (p_ID, q_index, a_index, a_string) VALUES ('$uniqueID','$questionIndex', '$answerIndex', '$answerString')";
+    $sql = " INSERT INTO test_table (p_ID, q_index, a_index, a_string) VALUES ('$uniqueID','$questionIndex', '$answerIndex', '$answerString')";
     if (mysqli_query($conn, $sql)) {
         echo "New record created successfully";
     } else {
