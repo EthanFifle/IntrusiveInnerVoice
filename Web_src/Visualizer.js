@@ -35,6 +35,7 @@ const questions = [
 const images = [];
 const userAnswers = [];
 let databaseAns = [];
+let dataIndexCount = 0;
 let displayAnswers = [];
 let selectedCheckboxes = [];
 let currentQuestion = 0;
@@ -50,6 +51,7 @@ function create_UUID(){
     });
     return uuid;
 }
+
 function displayQuestion() {
 
     const questionContainer = document.getElementById("question");
@@ -84,7 +86,7 @@ function displayQuestion() {
         if (event.target.type === "radio") {
             if (selectedOption) {
                 userAnswers[currentQuestion] = {answer: selectedOption, index: optionIndex};
-                databaseAns.push({p_ID: uuidIdentifier, q_index: currentQuestion + 1, a_index: optionIndex + 1, answer: selectedOption});
+                databaseAns[dataIndexCount] = {p_ID: uuidIdentifier, q_index: currentQuestion + 1, a_index: optionIndex + 1, answer: selectedOption};
                 displayAnswers[currentQuestion] = selectedOption;
                 nextQuestion();
             }
@@ -93,18 +95,21 @@ function displayQuestion() {
             if (selected.length <= 2){
                 if (event.target.checked) {
                     selectedCheckboxes.push({answer: selectedOption, index: optionIndex});
-                    databaseAns.push({p_ID: uuidIdentifier, q_index: currentQuestion + 1, a_index: optionIndex + 1, answer: selectedOption});
                     if (selectedCheckboxes.length > 2) {
                         selectedCheckboxes.shift();
-                        databaseAns.shift();
                     }
                 } else if (!event.target.checked) {
                     const indexToRemove = selectedCheckboxes.findIndex(
                         option => option.answer === selectedOption
                     );
                     selectedCheckboxes.splice(indexToRemove, 1);
-                    databaseAns.splice(indexToRemove, 1);
                 }
+
+                for(let i=0; i < selectedCheckboxes.length; i++){
+                    databaseAns[i+1] = {p_ID: uuidIdentifier, q_index: currentQuestion + 1, a_index: selectedCheckboxes[i].index, answer: selectedCheckboxes[i].answer};
+                    dataIndexCount = i+1;
+                }
+
                 userAnswers[currentQuestion] = selectedCheckboxes;
                 displayAnswers[currentQuestion] = selectedCheckboxes.map(option => option.answer).join(", ");
             } else {
@@ -115,6 +120,7 @@ function displayQuestion() {
         }
     };
 }
+
 function nextQuestion() {
 
     if(!nextButtonCreated){
@@ -124,6 +130,7 @@ function nextQuestion() {
         nextButtonCreated = true;
         nextButton.onclick = function() {
             currentQuestion++;
+            dataIndexCount++;
             nextButtonCreated = false;
 
             if (currentQuestion < questions.length) {
@@ -139,6 +146,7 @@ function nextQuestion() {
     }
 
 }
+
 function createImg(){
 
     for (let i = 0; i < userAnswers.length; i++) {
@@ -157,6 +165,7 @@ function createImg(){
     }
     finalScreen();
 }
+
 function layerTwo(indexOne, indexTwo){
     let opt_1 = indexOne + 1; //+1 to match with option number and pictures
     let opt_2 = indexTwo + 1;
@@ -175,6 +184,7 @@ function layerTwo(indexOne, indexTwo){
     images.push({src: temp, layer: "2", order: 3});
 
 }
+
 function allOtherLayers(question, answer, index){
 
     switch(question){
@@ -205,12 +215,14 @@ function allOtherLayers(question, answer, index){
     }
 
 }
+
 function imageExists(image_url) {
     let http = new XMLHttpRequest();
     http.open('HEAD', image_url, false);
     http.send();
     return http.status !== 404;
 }
+
 function displayImg(){
 
     images.sort((a, b) => {
@@ -234,6 +246,7 @@ function displayImg(){
     }
 
 }
+
 function highlight(){
     for(let i = 0; i < userAnswers.length; i++){
 
@@ -259,6 +272,7 @@ function highlight(){
 
     }
 }
+
 function highlightText(highlight){
 
     highlight.style.fontStyle = "italic";
@@ -266,9 +280,8 @@ function highlightText(highlight){
     highlight.style.textDecorationColor = "black";
 
 }
+
 function submitQuiz() {
-
-
 
     const submitBtn = document.getElementById("submitButton");
     submitBtn.style.display = "block";
@@ -294,6 +307,7 @@ function submitQuiz() {
     });
 
 }
+
 function finalScreen(){
     document.getElementById("question").innerHTML = "Quiz complete!";
     document.getElementById("options").innerHTML = "";

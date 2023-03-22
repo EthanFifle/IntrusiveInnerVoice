@@ -1,9 +1,9 @@
 <?php
 
 $servername = "localhost";
-$database = "intrusiveinnervoice";
-$username = "root";
-$password = "password";
+$database = "u880453721_IntrusiveIV";
+$username = "u880453721_myahwills";
+$password = "MyDegreeProject01$";
 
 $conn = mysqli_connect("localhost", $username, $password, $database);
 
