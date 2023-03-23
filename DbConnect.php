@@ -1,9 +1,15 @@
 <?php
-
+/*
 $servername = "localhost";
 $database = $_ENV['DATABASE'];
 $username = $_ENV['DB_USER'];
 $password = $_ENV['DB_PASS'];
+*/
+
+$servername = "localhost";
+$database = "intrusiveinnervoice";
+$username = "root";
+$password = "MyDataConnect01$";
 
 $conn = mysqli_connect("localhost", $username, $password, $database);
 

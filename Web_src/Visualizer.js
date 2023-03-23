@@ -33,10 +33,9 @@ const questions = [
 ];
 
 const images = [];
-const userAnswers = [];
-let selectedCheckboxes = [];
-let databaseAns = [];
-let dataIndexCount = 0;
+let userAnswers = [];
+let q2Flag = 1;
+let ansIndexCount = 0;
 let currentQuestion = 0;
 let nextButtonCreated = false;
 let uuidIdentifier = create_UUID();
@@ -84,36 +83,32 @@ function displayQuestion() {
 
         if (event.target.type === "radio") {
             if (selectedOption) {
-                userAnswers[currentQuestion] = {answer: selectedOption, index: optionIndex};
-                databaseAns[dataIndexCount] = {p_ID: uuidIdentifier, q_index: currentQuestion + 1, a_index: optionIndex + 1, answer: selectedOption};
+                userAnswers[ansIndexCount] = {p_ID: uuidIdentifier, q_index: currentQuestion + 1, a_index: optionIndex + 1, answer: selectedOption};
                 nextQuestion();
             }
         }else if (event.target.type === "checkbox") {
             const selected = optionsContainer.querySelectorAll("input[type=checkbox]:checked");
+
             if (selected.length <= 2){
+                q2Flag = selected.length;
                 if (event.target.checked) {
-                    selectedCheckboxes.push({answer: selectedOption, index: optionIndex});
-                    if (selectedCheckboxes.length > 2) {
-                        selectedCheckboxes.shift();
-                    }
+
+                    userAnswers.push({p_ID: uuidIdentifier, q_index: currentQuestion + 1, a_index: optionIndex + 1, answer: selectedOption});
+
                 } else if (!event.target.checked) {
-                    const indexToRemove = selectedCheckboxes.findIndex(
+                    const indexToRemove = userAnswers.findIndex(
                         option => option.answer === selectedOption
                     );
-                    selectedCheckboxes.splice(indexToRemove, 1);
+                    userAnswers.splice(indexToRemove, 1);
                 }
 
-                for(let i=0; i < selectedCheckboxes.length; i++){
-                    databaseAns[i+1] = {p_ID: uuidIdentifier, q_index: currentQuestion + 1, a_index: selectedCheckboxes[i].index + 1, answer: selectedCheckboxes[i].answer};
-                    dataIndexCount = i+1;
-                }
-
-                userAnswers[currentQuestion] = selectedCheckboxes;
             } else {
                 event.target.checked = false;
             }
 
+            ansIndexCount = q2Flag; //Make sure the index continues relative to the # of options selected
             nextQuestion();
+
         }
     };
 }
@@ -126,13 +121,18 @@ function nextQuestion() {
         nextButton.innerHTML = (currentQuestion === questions.length - 1) ? "Finish" : "Next";
         nextButtonCreated = true;
         nextButton.onclick = function() {
-            currentQuestion++;
-            dataIndexCount++;
-            nextButtonCreated = false;
 
-            if (currentQuestion < questions.length) {
+            if (currentQuestion < questions.length - 1 && (q2Flag !== 0) ) {
+
                 document.getElementById("options").innerHTML = "";
+                currentQuestion++;
+                ansIndexCount++;
+                nextButtonCreated = false;
                 displayQuestion();
+
+            } else if (q2Flag === 0){
+                nextButtonCreated = true;
+                console.log("Please select an option")
             } else {
                 nextButtonCreated = true;
                 createImg();
@@ -148,24 +148,22 @@ function createImg(){
 
     for (let i = 0; i < userAnswers.length; i++) {
 
-        if (i === 1){ //Question two handling
-            if (selectedCheckboxes.length === 2) {
-                layerTwo(userAnswers[i][0].index, userAnswers[i][1].index);
-            } else {
-                allOtherLayers(i, userAnswers[i][0].answer, userAnswers[i][0].index);
-            }
-
+        if (i === 1 && q2Flag === 2){ //Question two handling
+            layerTwo(userAnswers[i].a_index, userAnswers[i+1].a_index);
+            i++;
         } else {
-            allOtherLayers(i, userAnswers[i].answer, userAnswers[i].index);
+            allOtherLayers(userAnswers[i].q_index - 1, userAnswers[i].answer, userAnswers[i].a_index - 1);
         }
 
     }
+
     finalScreen();
 }
 
 function layerTwo(indexOne, indexTwo){
-    let opt_1 = indexOne + 1; //+1 to match images
-    let opt_2 = indexTwo + 1;
+    let opt_1 = indexOne;
+    let opt_2 = indexTwo;
+
     let src1 = "../Image_src/Layer 2 - Colours/Two colours/Colours_" + opt_1 + " + " + opt_2 + ".png";
     let src2 = "../Image_src/Layer 2 - Colours/Two colours/Colours_" + opt_2 + " + " + opt_1 + ".png";
 
@@ -244,27 +242,25 @@ function displayImg(){
 
 }
 
+function highlight() {
 
-function highlight(){
-    for(let i = 0; i < userAnswers.length; i++){
+    for (let i = 0; i < userAnswers.length; i++) {
 
-        if(i === 1){
-            if(selectedCheckboxes.length === 2){
-                let opt1Index = userAnswers[i][0].index;
-                let opt2Index = userAnswers[i][1].index;
-                const getText1 = document.getElementById(i + "." + opt1Index);
-                const getText2 = document.getElementById(i + "." + opt2Index);
-                highlightText(getText1);
-                highlightText(getText2);
-            }else{
-                let optOne = userAnswers[i][0].index;
-                const getText = document.getElementById(i + "." + optOne);
-                highlightText(getText);
-            }
+        let questionIndex = userAnswers[i].q_index - 1;
 
-        }else{
-            let optionIndex = userAnswers[i].index;
-            const getText = document.getElementById(i + "." + optionIndex);
+        if (i === 1 && q2Flag === 2) {
+
+            let opt1Index = userAnswers[i].a_index - 1;
+            let opt2Index = userAnswers[i + 1].a_index - 1;
+            let getText1 = document.getElementById(questionIndex + "." + opt1Index);
+            let getText2 = document.getElementById(questionIndex + "." + opt2Index);
+            highlightText(getText1);
+            highlightText(getText2);
+            i++;
+
+        } else {
+            let optionIndex = userAnswers[i].a_index - 1;
+            const getText = document.getElementById(questionIndex + "." + optionIndex);
             highlightText(getText);
         }
 
@@ -299,7 +295,7 @@ function submitQuiz() {
         };
         xhttp.open("POST", "DbConnect.php", true);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhttp.send("databaseAns=" + JSON.stringify(databaseAns) + "&date=" + date + "&time=" + time);
+        xhttp.send("databaseAns=" + JSON.stringify(userAnswers) + "&date=" + date + "&time=" + time);
         submitBtn.style.display = "none";
         document.getElementById("finalText").style.display = "block";
     });
@@ -309,7 +305,7 @@ function submitQuiz() {
 function finalScreen(){
     document.getElementById("question").innerHTML = "Quiz complete!";
     document.getElementById("options").innerHTML = "";
-    document.getElementById("options").innerHTML = "Your answers: " + databaseAns.map(option => option.answer).join(", ");
+    document.getElementById("options").innerHTML = "Your answers: " + userAnswers.map(option => option.answer).join(", ");
     displayImg();
     highlight();
     setTimeout(submitQuiz, 7000);

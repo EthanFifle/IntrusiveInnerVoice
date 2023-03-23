@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;Image update&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/da811b23-9fa1-4f82-b99d-7e5f7a4f0d2b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/da811b23-9fa1-4f82-b99d-7e5f7a4f0d2b.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DbConnect.php" beforeDir="false" afterPath="$PROJECT_DIR$/DbConnect.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web_src/Visualizer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Web_src/Visualizer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +81,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/ethan/IdeaProjects/IntrusiveInnerVoice",
+    "last_opened_file_path": "C:/Users/ethan/IdeaProjects/IntrusiveInnerVoice_V2",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -132,6 +135,7 @@
       <workItem from="1679451906403" duration="475000" />
       <workItem from="1679579500469" duration="273000" />
       <workItem from="1679579792567" duration="3484000" />
+      <workItem from="1679588335904" duration="8213000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;First commit&quot;">
       <created>1675293720746</created>
