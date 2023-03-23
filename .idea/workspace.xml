@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;Database duplicate fix&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DbConnect.php" beforeDir="false" afterPath="$PROJECT_DIR$/DbConnect.php" afterDir="false" />
-    </list>
+    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;Database duplicate fix&quot;" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,6 +130,7 @@
       <workItem from="1679415502318" duration="19144000" />
       <workItem from="1679443210133" duration="5314000" />
       <workItem from="1679451906403" duration="475000" />
+      <workItem from="1679579500469" duration="273000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;First commit&quot;">
       <created>1675293720746</created>
