@@ -34,10 +34,9 @@ const questions = [
 
 const images = [];
 const userAnswers = [];
+let selectedCheckboxes = [];
 let databaseAns = [];
 let dataIndexCount = 0;
-let displayAnswers = [];
-let selectedCheckboxes = [];
 let currentQuestion = 0;
 let nextButtonCreated = false;
 let uuidIdentifier = create_UUID();
@@ -87,7 +86,6 @@ function displayQuestion() {
             if (selectedOption) {
                 userAnswers[currentQuestion] = {answer: selectedOption, index: optionIndex};
                 databaseAns[dataIndexCount] = {p_ID: uuidIdentifier, q_index: currentQuestion + 1, a_index: optionIndex + 1, answer: selectedOption};
-                displayAnswers[currentQuestion] = selectedOption;
                 nextQuestion();
             }
         }else if (event.target.type === "checkbox") {
@@ -106,12 +104,11 @@ function displayQuestion() {
                 }
 
                 for(let i=0; i < selectedCheckboxes.length; i++){
-                    databaseAns[i+1] = {p_ID: uuidIdentifier, q_index: currentQuestion + 1, a_index: selectedCheckboxes[i].index, answer: selectedCheckboxes[i].answer};
+                    databaseAns[i+1] = {p_ID: uuidIdentifier, q_index: currentQuestion + 1, a_index: selectedCheckboxes[i].index + 1, answer: selectedCheckboxes[i].answer};
                     dataIndexCount = i+1;
                 }
 
                 userAnswers[currentQuestion] = selectedCheckboxes;
-                displayAnswers[currentQuestion] = selectedCheckboxes.map(option => option.answer).join(", ");
             } else {
                 event.target.checked = false;
             }
@@ -167,7 +164,7 @@ function createImg(){
 }
 
 function layerTwo(indexOne, indexTwo){
-    let opt_1 = indexOne + 1; //+1 to match with option number and pictures
+    let opt_1 = indexOne + 1; //+1 to match images
     let opt_2 = indexTwo + 1;
     let src1 = "../Image_src/Layer 2 - Colours/Two colours/Colours_" + opt_1 + " + " + opt_2 + ".png";
     let src2 = "../Image_src/Layer 2 - Colours/Two colours/Colours_" + opt_2 + " + " + opt_1 + ".png";
@@ -247,6 +244,7 @@ function displayImg(){
 
 }
 
+
 function highlight(){
     for(let i = 0; i < userAnswers.length; i++){
 
@@ -311,7 +309,7 @@ function submitQuiz() {
 function finalScreen(){
     document.getElementById("question").innerHTML = "Quiz complete!";
     document.getElementById("options").innerHTML = "";
-    document.getElementById("options").innerHTML = "Your answers: " + displayAnswers.join(", ");
+    document.getElementById("options").innerHTML = "Your answers: " + databaseAns.map(option => option.answer).join(", ");
     displayImg();
     highlight();
     setTimeout(submitQuiz, 7000);
