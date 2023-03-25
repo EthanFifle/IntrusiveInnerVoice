@@ -1094,6 +1094,7 @@ body {
     }
 
     .option-label {
+        -webkit-tap-highlight-color: transparent;
         user-select: none;
         margin-right: 20px;
         margin-left: 20px;
