@@ -946,7 +946,7 @@ body {
 
 .text-block-10 {
     margin-top: 60px;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
     font-family: Georgia, Times, 'Times New Roman', serif;
     font-size: 40px;
     line-height: 40px;
@@ -1040,10 +1040,10 @@ body {
 @media screen and (max-width: 479px) {
 
     .intro {
-        margin-right: 20px;
+        margin-right: 50px;
         margin-left: 20px;
-        font-size: 11px;
-        line-height: 17px;
+        font-size: 16px;
+        line-height: 20px;
     }
 
     .italic-text-2 {
@@ -1077,28 +1077,29 @@ body {
         width: 100%;
         margin-right: 20px;
         margin-left: 20px;
-        font-size: 11px;
-        line-height: 17px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 20px;
     }
 
     .optStyle{
         margin-right: 20px;
         margin-left: 20px;
-        font-size: 11px;
+        font-size: 16px;
         line-height: 17px
     }
 
     .option-label {
         margin-right: 20px;
         margin-left: 20px;
-        font-size: 11px;
+        font-size: 16px;
         line-height: 17px
     }
 
     .Button {
         margin-right: 20px;
         margin-left: 20px;
-        font-size: 11px;
+        font-size: 16px;
         line-height: 17px
     }
 
@@ -1110,6 +1111,11 @@ body {
 
     .column-11 {
         display: block;
+    }
+
+    .image-legend{
+        width: 95%;
+        height: 95%;
     }
 
     /*noinspection ALL*/
@@ -1124,15 +1130,17 @@ body {
     }
 
     .text-block-10 {
-        margin-right: 20px;
-        margin-left: 20px;
+        margin: -10px 20px -30px;
         font-size: 20px;
         line-height: 20px;
     }
 
     .paragraph-15 {
-        font-size:12px;
+        font-size:16px;
     }
 
+    .container-9 {
+        margin-bottom: 100px;
+    }
 
 }
