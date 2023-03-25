@@ -1094,14 +1094,11 @@ body {
     }
 
     .option-label {
+        user-select: none;
         margin-right: 20px;
         margin-left: 20px;
         font-size: 14px;
         line-height: 17px
-    }
-
-    .option-label {
-        user-select: none;
     }
 
     .Button {
