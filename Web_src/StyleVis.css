@@ -915,6 +915,10 @@ body {
     height: 0;
 }
 
+.option-label:hover {
+    color: red;
+}
+
 .radio-label{
     width: 0.7em;
     height: 0.7em;

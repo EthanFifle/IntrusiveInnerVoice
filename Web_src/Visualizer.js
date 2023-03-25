@@ -67,16 +67,6 @@ function displayQuestion() {
         )
         .join("");
 
-    const labels = document.querySelectorAll(".option-label");
-    labels.forEach(label => {
-        label.addEventListener("mouseover", function() {
-            label.style.color = "red";
-        });
-        label.addEventListener("mouseout", function() {
-            label.style.color = "";
-        });
-    });
-
     optionsContainer.onclick = function(event) {
         const selectedOption = event.target.value;
         const optionIndex = questions[currentQuestion].options.indexOf(selectedOption);
