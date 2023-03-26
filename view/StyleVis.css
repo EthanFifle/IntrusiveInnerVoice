@@ -1120,6 +1120,7 @@ body {
     }
 
     .Button {
+        -webkit-tap-highlight-color: transparent;
         margin-right: 20px;
         margin-left: 20px;
         font-size: 14px;
