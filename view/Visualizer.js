@@ -267,7 +267,9 @@ function highlightText(highlight){
 
 function submitQuiz() {
 
+    const disclaimer = document.getElementById("disclaimer");
     const submitBtn = document.getElementById("submitButton");
+    disclaimer.style.display = "block";
     submitBtn.style.display = "block";
 
     submitBtn.addEventListener("click", function () {
@@ -284,6 +286,7 @@ function submitQuiz() {
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhttp.send("databaseAns=" + JSON.stringify(userAnswers));
         submitBtn.style.display = "none";
+        disclaimer.style.display = "none";
         document.getElementById("finalText").style.display = "block";
     });
 
