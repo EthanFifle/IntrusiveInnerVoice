@@ -1126,13 +1126,7 @@ body {
         line-height: 17px
     }
 
-    .submitBtn{
-        margin-right: 20px;
-        margin-left: 20px;
-    }
-
     .disclaimer-txt{
-        margin-left: 20px;
         font-size: 12px;
         color: #4C5754;
         line-height: 14px;
