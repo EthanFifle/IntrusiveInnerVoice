@@ -42,7 +42,7 @@ class Connection
     function getImages(): array
     {
 
-        $sql = "SELECT a.p_ID, a.q_index, a.a_index
+        $sql = "SELECT a.p_ID, a.q_index, a.a_index, a.a_string
         FROM (
           SELECT DISTINCT p_ID
           FROM ImageBuilder

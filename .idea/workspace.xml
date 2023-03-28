@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;Mobile margin Update&quot;">
-      <change afterPath="$PROJECT_DIR$/view/Menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-25_10_01_a_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-25_10_01_a_m___Changes_.xml" afterDir="false" />
+    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;Mobile menu update&quot;">
+      <change afterPath="$PROJECT_DIR$/.img/Layer 3 - Glows/neutral.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/GalleryImgSrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/GetUserImages.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/GetUserImages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/initializeGallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/initializeGallery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Connection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/About.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/About.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/Gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/Gallery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/ImageBuilder.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/ImageBuilder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/StyleVis.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/StyleVis.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Visualizer.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/Visualizer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,15 +88,18 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/ethan/IdeaProjects/IntrusiveInnerVoice_V2",
+    "last_opened_file_path": "C:/Users/ethan/IdeaProjects/IntrusiveInnerVoice/.img/Layer 3 - Glows",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
+    "settings.editor.selected.configurable": "Settings.JavaScript",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -103,6 +110,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ethan\IdeaProjects\IntrusiveInnerVoice\.img\Layer 3 - Glows" />
       <recent name="C:\Users\ethan\IdeaProjects\IntrusiveInnerVoice\.img\Logo" />
       <recent name="C:\Users\ethan\IdeaProjects\IntrusiveInnerVoice" />
     </key>
@@ -148,14 +156,7 @@
       <workItem from="1679770574515" duration="3732000" />
       <workItem from="1679775435849" duration="35138000" />
       <workItem from="1679939387113" duration="15558000" />
-      <workItem from="1680019599398" duration="666000" />
-    </task>
-    <task id="LOCAL-00015" summary="&quot;V3 commit&quot;">
-      <created>1675490028384</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1675490028385</updated>
+      <workItem from="1680019599398" duration="25916000" />
     </task>
     <task id="LOCAL-00016" summary="&quot;V3 commit&quot;">
       <created>1675537553219</created>
@@ -493,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680012502130</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="&quot;Mobile menu update&quot;">
+      <created>1680020389209</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1680020389210</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,7 +545,8 @@
     <MESSAGE value="&quot;Mobile Click Patch&quot;" />
     <MESSAGE value="&quot;DP V2 + Multi-page with Gallery&quot;" />
     <MESSAGE value="&quot;Mobile margin Update&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Mobile margin Update&quot;" />
+    <MESSAGE value="&quot;Mobile menu update&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Mobile menu update&quot;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

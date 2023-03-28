@@ -1118,6 +1118,14 @@ body {
     transform: translate(0, 0);
 }
 
+.loaded{
+    opacity: 1;
+}
+
+.w-dyn-item{
+    position: relative;
+}
+
 .heading-4 {
     margin-top: 20px;
     font-family: Georgia, Times, 'Times New Roman', serif;
@@ -1369,12 +1377,6 @@ body {
         padding: 10px;
     }
 
-    .w-gallery {
-        position: absolute;
-        top: 20px;
-        right: 10px;
-        padding: 10px;
-    }
 
     .w-gallery-margin {
         max-width: none;

@@ -21,7 +21,7 @@
         n.className += t + "js" + ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
     }(window, document);</script>
 
-    <script src="ImageBuilder.js" type="text/javascript"></script>
+    <script src="GalleryImgSrc.js" type="module"></script>
     <link href="StyleVis.css" rel="stylesheet" type="text/css">
     <!-- used for image at the top of web browser !-->
     <link href="https://uploads-ssl.webflow.com/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
@@ -33,18 +33,16 @@
 <div class="navigation-bar w-nav" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease"
      data-easing2="ease" role="banner">
     <div class="w-container">
-        <a aria-current="page" aria-label="home" class="brand-link w-nav-brand w--current" href="../index.html">
-            <h1 class="brand-text">
-                <img src="../.img/Logo/logomotion_large.gif" alt="A GIF file" height="25%" width="25%">
-            </h1>
-        </a>
+        <h1 class="brand-text brand-link w-nav-brand w--current">
+            <img src="../.img/Logo/logomotion_large.gif" alt="A GIF file" height="25%" width="25%">
+        </h1>
         <nav class="navigation-menu w-nav-menu" role="navigation" style="transform: translateY(0px) translateX(0px);">
             <a aria-current="page" class="navigation-link w-nav-link" style="max-width: 940px;" href="../index.html">Quiz</a>
             <a class="navigation-link w-nav-link w--current" style="max-width: 940px;" href="Gallery.html">Gallery</a>
             <a class="navigation-link w-nav-link" style="max-width: 940px;" href="About.html" >About</a>
         </nav>
         <div aria-controls="w-nav-overlay-0" aria-expanded="false" aria-haspopup="menu" aria-label="menu"
-             class="hamburger-button w-nav-button w-gallery" role="button" style="-webkit-user-select: text;" tabindex="0">
+             class="hamburger-button w-nav-button" role="button" style="-webkit-user-select: text;" tabindex="0">
             <div class="hamburger-icon"></div>
         </div>
     </div>
@@ -62,65 +60,33 @@
     <div class="w-container w-gallery-margin">
         <div class="w-dyn-list">
             <div class="w-dyn-items w-row" role="list">
-                <div class="w-dyn-item w-col w-col-4" role="listitem">
-                    <a class="photo-link-block w-inline-block" href="/photos/city">
-                        <img alt="" src="https://uploads-ssl.webflow.com/641f047c71c8e56d1c70dc60/641f047c71c8e5b55f70dc7e_photo-1416934625760-d56f5e79f6fe-square700.jpg">
-                        <div class="title">Clouds over Ranier</div>
-                    </a>
+                <div id="img_1" class="w-dyn-item w-col w-col-4" role="listitem">
+                   <!-- <div class="title">White Frost</div> !-->
                 </div>
-                <div class="w-dyn-item w-col w-col-4" role="listitem">
-                    <a class="photo-link-block w-inline-block" href="/photos/together">
-                        <img alt="" sizes="(max-width: 767px) 96vw, (max-width: 991px) 229.328125px, 299.9921875px"
-                        src="https://uploads-ssl.webflow.com/641f047c71c8e56d1c70dc60/641f047c71c8e5a55a70dd27_photo-1427955569621-3e494de2b1d2-square700.jpg"
-                        srcset="https://uploads-ssl.webflow.com/641f047c71c8e56d1c70dc60/641f047c71c8e5a55a70dd27_photo-1427955569621-3e494de2b1d2-square700-p-500x.jpeg 500w,
-                                https://uploads-ssl.webflow.com/641f047c71c8e56d1c70dc60/641f047c71c8e5a55a70dd27_photo-1427955569621-3e494de2b1d2-square700.jpg 700w">
-                        <div class="title">White Frost</div>
-                    </a>
+                <div id="img_2" class="w-dyn-item w-col w-col-4" role="listitem">
+
                 </div>
-                <div class="w-dyn-item w-col w-col-4" role="listitem"><a class="photo-link-block w-inline-block"
-                                                                         href="/photos/blue"><img
-                        alt=""
-                        src="https://uploads-ssl.webflow.com/641f047c71c8e56d1c70dc60/641f047c71c8e57be170dd15_photo-1428184003419-4cfd6ab3d280-square700.jpg">
-                    <div class="title">Macaw Feathers</div>
-                </a></div>
-                <div class="w-dyn-item w-col w-col-4" role="listitem"><a class="photo-link-block w-inline-block"
-                                                                         href="/photos/coast"><img
-                        alt=""
-                        src="https://uploads-ssl.webflow.com/641f047c71c8e56d1c70dc60/641f047c71c8e5697e70dd12_photo-1444090542259-0af8fa96557e-square700.jpg">
-                    <div class="title">Burning Clouds</div>
-                </a></div>
-                <div class="w-dyn-item w-col w-col-4" role="listitem"><a class="photo-link-block w-inline-block"
-                                                                         href="/photos/night"><img
-                        alt=""
-                        sizes="(max-width: 767px) 96vw, (max-width: 991px) 229.328125px, 299.9921875px"
-                        src="https://uploads-ssl.webflow.com/641f047c71c8e56d1c70dc60/641f047c71c8e57fe570dc71_photo-1432251407527-504a6b4174a2-square700.jpg"
-                        srcset="https://uploads-ssl.webflow.com/641f047c71c8e56d1c70dc60/641f047c71c8e57fe570dc71_photo-1432251407527-504a6b4174a2-square700-p-500x.jpeg 500w, https://uploads-ssl.webflow.com/641f047c71c8e56d1c70dc60/641f047c71c8e57fe570dc71_photo-1432251407527-504a6b4174a2-square700.jpg 700w">
-                    <div class="title">Pool Ripples</div>
-                </a></div>
-                <div class="w-dyn-item w-col w-col-4" role="listitem"><a class="photo-link-block w-inline-block"
-                                                                         href="/photos/art"><img
-                        alt=""
-                        src="https://uploads-ssl.webflow.com/641f047c71c8e56d1c70dc60/641f047c71c8e53aec70dd18_photo-1433155327100-12aac6a14ff1-square700.jpg">
-                    <div class="title">Yellow Sunset</div>
-                </a></div>
-                <div class="w-dyn-item w-col w-col-4" role="listitem"><a class="photo-link-block w-inline-block"
-                                                                         href="/photos/play"><img
-                        alt=""
-                        src="https://uploads-ssl.webflow.com/641f047c71c8e56d1c70dc60/641f047c71c8e58a4270dd04_photo-1433245437947-a0595ee87118-square700.jpg">
-                    <div class="title">Silence</div>
-                </a></div>
-                <div class="w-dyn-item w-col w-col-4" role="listitem"><a class="photo-link-block w-inline-block"
-                                                                         href="/photos/lift"><img
-                        alt=""
-                        src="https://uploads-ssl.webflow.com/641f047c71c8e56d1c70dc60/641f047c71c8e5b15770dd03_photo-1436397543931-01c4a5162bdb-square700.jpg">
-                    <div class="title">Red Wall</div>
-                </a></div>
-                <div class="w-dyn-item w-col w-col-4" role="listitem"><a class="photo-link-block w-inline-block"
-                                                                         href="/photos/dog"><img
-                        alt=""
-                        src="https://uploads-ssl.webflow.com/641f047c71c8e56d1c70dc60/641f047c71c8e55e5b70dd1e_photo-1441906363162-903afd0d3d52-square700.jpg">
-                    <div class="title">Blue Foam</div>
-                </a></div>
+                <div id="img_3" class="w-dyn-item w-col w-col-4" role="listitem">
+
+                </div>
+                <div id="img_4" class="w-dyn-item w-col w-col-4" role="listitem">
+
+                </div>
+                <div id="img_5" class="w-dyn-item w-col w-col-4" role="listitem">
+
+                </div>
+                <div id="img_6" class="w-dyn-item w-col w-col-4" role="listitem">
+
+                </div>
+                <div id="img_7" class="w-dyn-item w-col w-col-4" role="listitem">
+
+                </div>
+                <div id="img_8" class="w-dyn-item w-col w-col-4" role="listitem">
+
+                </div>
+                <div id="img_9" class="w-dyn-item w-col w-col-4" role="listitem">
+
+                </div>
             </div>
         </div>
     </div>

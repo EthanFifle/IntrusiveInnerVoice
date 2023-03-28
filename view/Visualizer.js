@@ -1,4 +1,6 @@
 
+import * as imageBuilder from './ImageBuilder.js';
+
 const questions = [
     {//1
         question: "1. What word best describes the tone of the voice?", //Material for face
@@ -32,7 +34,6 @@ const questions = [
     }
 ];
 
-const images = [];
 let userAnswers = [];
 let q2Flag = 1;
 let ansIndexCount = 0;
@@ -136,13 +137,15 @@ function nextQuestion() {
 
 function createImg(){
 
+    imageBuilder.clear();
+
     for (let i = 0; i < userAnswers.length; i++) {
 
         if (i === 1 && q2Flag === 2){ //Question two handling
-            layerTwo(userAnswers[i].a_index, userAnswers[i+1].a_index);
+            imageBuilder.layerTwo(userAnswers[i].a_index, userAnswers[i+1].a_index);
             i++;
         } else {
-            allOtherLayers(userAnswers[i].q_index - 1, userAnswers[i].answer, userAnswers[i].a_index - 1);
+            imageBuilder.allOtherLayers(userAnswers[i].q_index - 1, userAnswers[i].answer, userAnswers[i].a_index - 1);
         }
 
     }
@@ -150,65 +153,9 @@ function createImg(){
     finalScreen();
 }
 
-function layerTwo(indexOne, indexTwo){
-    let opt_1 = indexOne;
-    let opt_2 = indexTwo;
-
-    let src1 = "../.img/Layer 2 - Colours/Two colours/Colours_" + opt_1 + " + " + opt_2 + ".png";
-    let src2 = "../.img/Layer 2 - Colours/Two colours/Colours_" + opt_2 + " + " + opt_1 + ".png";
-
-    let temp = [];
-    if (imageExists(src1)) {
-        temp.push(src1);
-    } else if (imageExists(src2)) {
-        temp.push(src2);
-    } else {
-        console.error("Image not found: " + src1 + " and " + src2);
-    }
-
-    images.push({src: temp, layer: "2", order: 3});
-
-}
-
-function allOtherLayers(question, answer, index){
-
-    switch(question){
-        case 0:
-            images.push({src: "../.img/Layer 1 - Backgrounds/" + answer + ".png", layer: 1, order: 2});
-            break;
-        case 1:
-            images.push({src: "../.img/Layer 2 - Colours/Single colours/Colours_" + answer + ".png", layer: 2, order: 3});
-            break;
-        case 2:
-            if (index === 0){
-                images.push({src: "../.img/Layer 3 - Glows/Glows_warm.png", layer: 3, order: 4});
-            }
-            if (index === 2) {
-                images.push({src: "../.img/Layer 3 - Glows/Glows_cold.png", layer: 3, order: 4});
-            }
-            break;
-        case 3:
-            images.push({src: "../.img/Layer 4 - Face Shapes/" + answer + ".png", layer: 5, order: 1});
-            break;
-        case 4:
-            images.push({src: "../.img/Layer 5 - Eyes/" + answer + ".png", layer: 5, order: 5});
-            break;
-        case 5:
-            images.push({src: "../.img/Layer 6 - Mouths/" + answer + ".png", layer: 6, order: 6});
-            break;
-        default:
-    }
-
-}
-
-function imageExists(image_url) {
-    let http = new XMLHttpRequest();
-    http.open('HEAD', image_url, false);
-    http.send();
-    return http.status !== 404;
-}
-
 function displayImg(){
+
+    const images = imageBuilder.getImages();
 
     images.sort((a, b) => {
         return a.order - b.order;
