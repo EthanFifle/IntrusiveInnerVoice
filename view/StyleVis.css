@@ -515,7 +515,7 @@ ul, ol {
 
 .w-icon-nav-menu:before {
     content: "\e602";
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .w-nav {
@@ -1312,7 +1312,7 @@ body {
     .hamburger-button {
         position: absolute;
         top: 20px;
-        right: 20px;
+        right: 15px;
         padding: 10px;
     }
 
@@ -1443,7 +1443,6 @@ body {
 
     .container-9 {
         margin-bottom: 100px;
-        margin-right: -6px;
     }
 
 }

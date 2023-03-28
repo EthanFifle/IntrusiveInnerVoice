@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;DP V2 + Multi-page with Gallery&quot;">
+    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;Mobile margin Update&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/Gallery.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/StyleVis.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/StyleVis.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,14 +141,7 @@
       <workItem from="1679588335904" duration="8995000" />
       <workItem from="1679770574515" duration="3732000" />
       <workItem from="1679775435849" duration="35138000" />
-      <workItem from="1679939387113" duration="14359000" />
-    </task>
-    <task id="LOCAL-00013" summary="&quot;V3 commit&quot;">
-      <created>1675489955783</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1675489955783</updated>
+      <workItem from="1679939387113" duration="15254000" />
     </task>
     <task id="LOCAL-00014" summary="&quot;V3 commit&quot;">
       <created>1675489971594</created>
@@ -487,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680010113012</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="&quot;Mobile margin Update&quot;">
+      <created>1680011887476</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1680011887476</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,7 +529,8 @@
     <MESSAGE value="&quot;Mobile &amp; Desktop Style Update&quot;" />
     <MESSAGE value="&quot;Mobile Click Patch&quot;" />
     <MESSAGE value="&quot;DP V2 + Multi-page with Gallery&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;DP V2 + Multi-page with Gallery&quot;" />
+    <MESSAGE value="&quot;Mobile margin Update&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Mobile margin Update&quot;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
