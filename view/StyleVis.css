@@ -518,6 +518,59 @@ ul, ol {
     font-size: 33px;
 }
 
+.hamburger-button{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.hamburger-icon{
+    width: 18px;
+    height: 3px;
+    background: black;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,255,255,.2);
+    transition: all .5s ease-in-out;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 3px;
+    background: black;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,255,255,.2);
+    transition: all .5s ease-in-out;
+}
+
+.hamburger-icon::before{
+    transform: translateY(-6px);
+}
+.hamburger-icon::after{
+    transform: translateY(6px);
+}
+
+.hamburger-button.open .hamburger-icon {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.hamburger-button.open .hamburger-icon::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.hamburger-button.open .hamburger-icon::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
 .w-nav {
     position: relative;
     background: #dddddd;
@@ -1226,7 +1279,7 @@ body {
     }
 
     .hamburger-button.w--open {
-        background-color: #000;
+        background-color: white;
     }
 
     .navigation-menu {
@@ -1311,8 +1364,8 @@ body {
 
     .hamburger-button {
         position: absolute;
-        top: 20px;
-        right: 15px;
+        top: 33px;
+        right: 23px;
         padding: 10px;
     }
 
