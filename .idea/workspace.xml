@@ -4,8 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;Mobile &amp; Desktop Style Update&quot;">
+    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;Mobile Click Patch&quot;">
+      <change afterPath="$PROJECT_DIR$/.img/Logo/logomotion_large.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.img/Logo/logomotion_small.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/GetUserImages.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/initializeGallery.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/About.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/Gallery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/ImageBuilder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/initializeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Connection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/StyleVis.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/StyleVis.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Visualizer.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/Visualizer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +32,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -69,41 +82,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/ethan/IdeaProjects/IntrusiveInnerVoice",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ethan/IdeaProjects/IntrusiveInnerVoice/.img/Logo&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ethan\IdeaProjects\IntrusiveInnerVoice\.img\Logo" />
       <recent name="C:\Users\ethan\IdeaProjects\IntrusiveInnerVoice" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ethan\IdeaProjects\IntrusiveInnerVoice\view" />
       <recent name="C:\Users\ethan\IdeaProjects\IntrusiveInnerVoice" />
       <recent name="C:\Users\ethan\IdeaProjects\IntrusiveInnerVoice\src" />
       <recent name="C:\Users\ethan\IdeaProjects\IntrusiveInnerVoice\src\view" />
       <recent name="C:\Users\ethan\IdeaProjects\IntrusiveInnerVoice\src\controller" />
-      <recent name="C:\Users\ethan\IdeaProjects\IntrusiveInnerVoice\model" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -138,28 +152,8 @@
       <workItem from="1679579792567" duration="3484000" />
       <workItem from="1679588335904" duration="8995000" />
       <workItem from="1679770574515" duration="3732000" />
-      <workItem from="1679775435849" duration="13251000" />
-    </task>
-    <task id="LOCAL-00009" summary="&quot;V3 commit&quot;">
-      <created>1675487649145</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1675487649145</updated>
-    </task>
-    <task id="LOCAL-00010" summary="&quot;V3 commit&quot;">
-      <created>1675487688359</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1675487688359</updated>
-    </task>
-    <task id="LOCAL-00011" summary="&quot;V3 commit&quot;">
-      <created>1675487787629</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1675487787629</updated>
+      <workItem from="1679775435849" duration="35138000" />
+      <workItem from="1679939387113" duration="13059000" />
     </task>
     <task id="LOCAL-00012" summary="&quot;V3 commit&quot;">
       <created>1675488244553</created>
@@ -483,7 +477,28 @@
       <option name="project" value="LOCAL" />
       <updated>1679845289308</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="&quot;Mobile Click Patch&quot;">
+      <created>1679845701376</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1679845701377</updated>
+    </task>
+    <task id="LOCAL-00059" summary="&quot;Mobile Click Patch&quot;">
+      <created>1679845803644</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1679845803644</updated>
+    </task>
+    <task id="LOCAL-00060" summary="&quot;Mobile Click Patch&quot;">
+      <created>1679845870654</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1679845870654</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,7 +539,8 @@
     <MESSAGE value="&quot;Mobile Update V3&quot;" />
     <MESSAGE value="&quot;Design Principles Update&quot;" />
     <MESSAGE value="&quot;Mobile &amp; Desktop Style Update&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Mobile &amp; Desktop Style Update&quot;" />
+    <MESSAGE value="&quot;Mobile Click Patch&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Mobile Click Patch&quot;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

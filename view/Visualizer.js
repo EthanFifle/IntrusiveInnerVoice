@@ -276,13 +276,7 @@ function submitQuiz() {
         // Send databaseAns to PHP script
 
         const xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState === 4 && this.status === 200) {
-                console.log(this.responseText);
-            }
-        };
-
-        xhttp.open("POST", "../Controller.php", true);
+        xhttp.open("POST", "../initializeController.php", true);
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhttp.send("databaseAns=" + JSON.stringify(userAnswers));
         submitBtn.style.display = "none";
@@ -291,7 +285,6 @@ function submitQuiz() {
     });
 
 }
-
 function finalScreen(){
     document.getElementById("question").innerHTML = "Quiz complete!";
     document.getElementById("options").innerHTML = "";
@@ -303,3 +296,5 @@ function finalScreen(){
 }
 
 window.onload =  displayQuestion;
+
+

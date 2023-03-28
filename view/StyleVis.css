@@ -14,11 +14,6 @@
 /* ==========================================================================
    normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css
    ========================================================================== */
-html {
-    font-family: sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
 
 body {
     margin: 0;
@@ -42,9 +37,6 @@ audio:not([controls]) {
     display: none;
 }
 
-a {
-    background-color: transparent;
-}
 
 a:active, a:hover {
     outline: 0;
@@ -521,6 +513,193 @@ ul, ol {
     border: none
 }
 
+.w-icon-nav-menu:before {
+    content: "\e602";
+    font-size: 30px;
+}
+
+.w-nav {
+    position: relative;
+    background: #dddddd;
+    z-index: 1000;
+}
+
+.w-nav:before, .w-nav:after {
+    content: " ";
+    display: table;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-column-end: 2;
+    grid-row-end: 2;
+}
+
+.w-nav:after {
+    clear: both;
+}
+
+.w-nav-brand {
+    position: relative;
+    float: left;
+    text-decoration: none;
+    color: #333333;
+}
+
+.w-nav-link {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    color: #222222;
+    padding: 20px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.w-nav-link.w--current {
+    color: #0082f3;
+}
+
+.w-nav-menu {
+    position: relative;
+    float: right;
+}
+
+[data-nav-menu-open] {
+    display: block !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #C8C8C8;
+    text-align: center;
+    overflow: visible;
+    min-width: 200px
+}
+
+.w--nav-link-open {
+    display: block;
+    position: relative
+}
+
+.w-nav-overlay {
+    position: absolute;
+    overflow: hidden;
+    display: none;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.w-nav-overlay [data-nav-menu-open] {
+    top: 0
+}
+
+.w-nav[data-animation="over-left"] .w-nav-overlay {
+    width: auto
+}
+
+.w-nav[data-animation="over-left"] .w-nav-overlay,.w-nav[data-animation="over-left"] [data-nav-menu-open] {
+    right: auto;
+    z-index: 1;
+    top: 0
+}
+
+.w-nav[data-animation="over-right"] .w-nav-overlay {
+    width: auto
+}
+
+.w-nav[data-animation="over-right"] .w-nav-overlay,.w-nav[data-animation="over-right"] [data-nav-menu-open] {
+    left: auto;
+    z-index: 1;
+    top: 0
+}
+
+.w-nav-button {
+    position: relative;
+    float: right;
+    padding: 18px;
+    font-size: 24px;
+    display: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    tap-highlight-color: rgba(0,0,0,0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.w-nav-button:focus {
+    outline: 0
+}
+
+.w-nav-button.w--open {
+    background-color: #C8C8C8;
+    color: white
+}
+
+.w-nav[data-collapse="all"] .w-nav-menu {
+    display: none
+}
+
+.w-nav[data-collapse="all"] .w-nav-button {
+    display: block
+}
+
+.w--nav-dropdown-open {
+    display: block
+}
+
+.w--nav-dropdown-toggle-open {
+    display: block
+}
+
+.w--nav-dropdown-list-open {
+    position: static
+}
+
+@media screen and (max-width: 991px){
+
+    .w-nav[data-collapse="medium"] .w-nav-menu {
+        display: none;
+    }
+
+    .w-nav[data-collapse="medium"] .w-nav-button {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .w-nav[data-collapse="small"] .w-nav-menu {
+        display:none
+    }
+
+    .w-nav[data-collapse="small"] .w-nav-button {
+        display: block
+    }
+
+    .w-nav-brand {
+        padding-left: 10px
+    }
+
+}
+
+@media screen and (max-width: 479px) {
+
+    .w-nav[data-collapse="tiny"] .w-nav-menu {
+        display:none
+    }
+
+    .w-nav[data-collapse="tiny"] .w-nav-button {
+        display: block
+    }
+
+}
+
 fieldset {
     padding: 0;
     margin: 0;
@@ -631,7 +810,10 @@ label {
 
 @media screen and (max-width: 479px) {
     .w-container {
-        max-width: none
+        max-width: none;
+        margin-left: 20px;
+        margin-right: 20px;
+
     }
 
     .w-col {
@@ -790,23 +972,8 @@ label {
     display: block
 }
 
-[data-nav-menu-open] {
-    display: block !important;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #C8C8C8;
-    text-align: center;
-    overflow: visible;
-    min-width: 200px
-}
 
-.w-nav-overlay [data-nav-menu-open] {
-    top: 0
-}
-
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991px){
 
 }
 
@@ -819,6 +986,7 @@ label {
 }
 
 @media screen and (max-width: 479px) {
+
 }
 
 @keyframes spin {
@@ -840,6 +1008,51 @@ body {
     line-height: 20px;
 }
 
+.navigation-link {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    color: silver;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 1px;
+}
+
+.navigation-link:hover {
+    color: #333;
+}
+
+.navigation-link.w--current {
+    color: #333;
+}
+
+.navigation-bar {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: #fff;
+    text-transform: lowercase;
+}
+
+.navigation-menu {
+    margin-top: 3px;
+}
+
+.brand-text {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 33px;
+    line-height: 36px;
+    font-weight: 400;
+}
+
+.w-gallery-space{
+    margin-bottom: 30px;
+}
+
+.w-img-border{
+    border: 1px solid black;
+}
 
 /*noinspection ALL*/
 .imgDisplay {
@@ -859,7 +1072,7 @@ body {
 }
 
 .heading-4 {
-    margin-top: 100px;
+    margin-top: 20px;
     font-family: Georgia, Times, 'Times New Roman', serif;
     font-size: 80px;
     line-height: 72px;
@@ -1004,9 +1217,51 @@ body {
 
 @media screen and (max-width: 991px) {
 
+    .navigation-link {
+        padding: 9px 0px;
+        color: #ecf0f1;
+        text-align: center;
+    }
+
+    .navigation-link:hover {
+        color: #fff;
+    }
+
+    .hamburger-button {
+        padding: 7px;
+    }
+
+    .hamburger-button.w--open {
+        background-color: #000;
+    }
+
+    .navigation-menu {
+        margin-top: 0px;
+        padding-top: 26px;
+        padding-bottom: 26px;
+        background-color: #000;
+    }
+
 }
 
 @media screen and (max-width: 767px) {
+
+    .navigation-bar {
+        z-index: 1000;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .hamburger-button {
+        position: absolute;
+        top: 40px;
+        right: 10px;
+        padding: 10px;
+    }
+
+    .brand-text {
+        margin-top: 5px;
+    }
 
     .heading-4 {
         margin-right: 20px;
@@ -1060,6 +1315,14 @@ body {
 
 @media screen and (max-width: 479px) {
 
+    .w-gallery {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        padding: 10px;
+    }
+
+
     .intro {
         margin-right: 50px;
         margin-left: 20px;
@@ -1072,6 +1335,7 @@ body {
     }
 
     .heading-4 {
+        margin-top: 40px;
         margin-right: 20px;
         margin-left: 20px;
         font-size: 30px;
