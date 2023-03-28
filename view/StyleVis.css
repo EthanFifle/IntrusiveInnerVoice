@@ -809,12 +809,6 @@ label {
 }
 
 @media screen and (max-width: 479px) {
-    .w-container {
-        max-width: none;
-        margin-left: 20px;
-        margin-right: 20px;
-
-    }
 
     .w-col {
         width: 100%
@@ -1315,11 +1309,24 @@ body {
 
 @media screen and (max-width: 479px) {
 
+    .hamburger-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 10px;
+    }
+
     .w-gallery {
         position: absolute;
         top: 20px;
         right: 10px;
         padding: 10px;
+    }
+
+    .w-gallery-margin {
+        max-width: none;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
 
@@ -1436,6 +1443,7 @@ body {
 
     .container-9 {
         margin-bottom: 100px;
+        margin-right: -6px;
     }
 
 }
