@@ -1060,7 +1060,7 @@ body {
     padding-bottom: 7px;
     font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
     color: silver;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 18px;
     letter-spacing: 1px;
 }
@@ -1070,7 +1070,7 @@ body {
 }
 
 .navigation-link.w--current {
-    color: #333;
+    color: dimgrey;
 }
 
 .navigation-bar {
@@ -1269,6 +1269,10 @@ body {
     padding: 10px;
 }
 
+.w-about-space{
+    padding-bottom: 60px;
+}
+
 
 @media screen and (max-width: 991px) {
 
@@ -1370,13 +1374,16 @@ body {
 
 @media screen and (max-width: 479px) {
 
+    .navigation-link {
+        font-size: 14px;
+    }
+
     .hamburger-button {
         position: absolute;
         top: 33px;
         right: 23px;
         padding: 10px;
     }
-
 
     .w-gallery-margin {
         max-width: none;
@@ -1390,6 +1397,11 @@ body {
         margin-left: 20px;
         font-size: 14px;
         line-height: 20px;
+    }
+
+    .w-about-margin{
+        margin-top: 50px;
+        margin-bottom: -30px;
     }
 
     .italic-text-2 {
