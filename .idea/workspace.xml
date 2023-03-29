@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;Nav-menu + Gallery Update&quot;">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-28_11_23_p_m__[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-28_11_23_p_m___Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.img/Logo/meta.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Connection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/About.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/About.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/Gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/StyleVis.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/StyleVis.css" afterDir="false" />
-    </list>
+    <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;Nav-menu + Gallery Update&quot;" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,13 +145,6 @@
       <workItem from="1679775435849" duration="35138000" />
       <workItem from="1679939387113" duration="15558000" />
       <workItem from="1680019599398" duration="25916000" />
-    </task>
-    <task id="LOCAL-00016" summary="&quot;V3 commit&quot;">
-      <created>1675537553219</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1675537553220</updated>
     </task>
     <task id="LOCAL-00017" summary="&quot;V3 commit&quot;">
       <created>1675537848261</created>
@@ -500,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680020389210</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="&quot;Nav-menu + Gallery Update&quot;">
+      <created>1680103211365</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1680103211368</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
