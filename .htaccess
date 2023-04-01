@@ -1,9 +1,32 @@
 RewriteEngine On
 
-# Rewrite "/quiz" to "/index.html"
-RewriteRule ^quiz$ /index.html [L]
+# Redirect "/about.html" to "/about"
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
 
-# Rewrite URLs to HTML files if they exist
+# Serve "about.html" when "/about" is requested
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.*)$ $1.html [L]
+RewriteRule ^about$ about.html [L]
+
+# Redirect "/gallery.html" to "/gallery"
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+# Serve "about.html" when "/about" is requested
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^gallery$ gallery.html [L]
+
+# Redirect "/" to "/quiz"
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^$ /quiz [R=301,L]
+
+# Redirect "/index.html" to "/quiz"
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*index\.html\ HTTP/
+RewriteRule ^(.*)index\.html$ /quiz [R=301,L]
+
+# Serve "index.html" when "/quiz" is requested
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^quiz$ index.html [L]
