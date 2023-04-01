@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1b05e60-3974-4d1c-889e-865737c280af" name="Changes" comment="&quot;HTML apple&quot;">
-      <change afterPath="$PROJECT_DIR$/.img/Logo/social.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-25_10_01_a_m__[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-25_10_01_a_m___Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-28_11_23_p_m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-03-28_11_23_p_m___Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.img/Logo/logomotion_small.gif" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/Connection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/About.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/About.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/Gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/GalleryImgSrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/GalleryImgSrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/About.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/gallery.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,9 +112,9 @@
       <recent name="C:\Users\ethan\IdeaProjects\IntrusiveInnerVoice" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ethan\IdeaProjects\IntrusiveInnerVoice" />
       <recent name="C:\Users\ethan\IdeaProjects\IntrusiveInnerVoice\.img\Logo" />
       <recent name="C:\Users\ethan\IdeaProjects\IntrusiveInnerVoice\view" />
-      <recent name="C:\Users\ethan\IdeaProjects\IntrusiveInnerVoice" />
       <recent name="C:\Users\ethan\IdeaProjects\IntrusiveInnerVoice\src" />
       <recent name="C:\Users\ethan\IdeaProjects\IntrusiveInnerVoice\src\view" />
     </key>
@@ -155,6 +156,7 @@
       <workItem from="1680019599398" duration="25916000" />
       <workItem from="1680302640233" duration="64000" />
       <workItem from="1680351118384" duration="5385000" />
+      <workItem from="1680378874575" duration="3352000" />
     </task>
     <task id="LOCAL-00018" summary="&quot;V3 commit&quot;">
       <created>1675539324755</created>
