@@ -54,7 +54,7 @@ class Connection
             ORDER BY q_index DESC
           )
           ORDER BY RAND()
-          LIMIT 15
+          LIMIT 30
         ) as b
         INNER JOIN ImageBuilder a ON a.p_ID = b.p_ID";
 

@@ -47,6 +47,11 @@ async function displayGallery(index) {
 
 async function displayImg(images, index){
 
+    const container = document.createElement("div");
+    container.id = "img_" + index;
+    container.classList.add('w-dyn-item', 'w-col', 'w-col-4');
+    container.setAttribute("role", "listItem");
+
     const imageArr = [];
     for (let i = 0; i < images.length; i++) {
         const image = new Image();
@@ -64,8 +69,6 @@ async function displayImg(images, index){
     canvas.width = 350;
     canvas.height = 350;
 
-    console.log(loadedImages);
-
     for (let i = 0; i < loadedImages.length; i++) {
         const ctx = canvas.getContext("2d");
         const image = loadedImages[i];
@@ -78,6 +81,11 @@ async function displayImg(images, index){
 
     }
 
-    document.getElementById("img_" + index).appendChild(canvas);
+    const image = document.createElement("img");
+    image.classList.add('w-dyn-item', 'w-col', 'w-col-4');
+    image.id = "img_" + index;
+
+    container.appendChild(canvas);
+    document.getElementById("galleryImages").appendChild(container);
 
 }
