@@ -1266,7 +1266,12 @@ body {
     line-height: 18px;
     background-color: #2BB6A8;
     color: white;
+    margin-left: 20px;
     padding: 10px;
+}
+
+.fnlText{
+    margin-left: 20px;
 }
 
 .w-about-space{
@@ -1350,7 +1355,7 @@ body {
         width: 568px;
         height:40vw;
         margin-right: 0px;
-        margin-left: 20px;
+        margin-left: 0px;
     }
 
 
@@ -1467,6 +1472,7 @@ body {
 
     .disclaimer-txt{
         font-size: 12px;
+        margin-left: 20px;
         color: #4C5754;
         line-height: 14px;
         font-style: italic;
@@ -1511,5 +1517,39 @@ body {
     .container-9 {
         margin-bottom: 100px;
     }
+
+}
+
+@media screen and (max-width: 330px) {
+
+    .div-block-6{
+        height: calc(100vw + 40px);
+    }
+
+}
+
+@media screen and (max-width: 290px) {
+
+    .div-block-6{
+        height: calc(100vw + 60px);
+    }
+
+}
+
+@media screen and (max-width: 270px) {
+
+    .div-block-6{
+        height: calc(100vw + 80px);
+    }
+
+
+}
+
+@media screen and (max-width: 250px) {
+
+    .div-block-6{
+        height: calc(100vw + 100px);
+    }
+
 
 }
